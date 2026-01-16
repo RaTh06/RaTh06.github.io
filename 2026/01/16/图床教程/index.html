@@ -22,19 +22,21 @@
     var CONFIG = {"hostname":"rath02.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="推荐方案：Cloudflare R2 + PicGo这是目前最推荐给使用了 Cloudflare 用户的方案。  为什么选它？ 完全免费：Cloudflare R2 提供 10GB 的免费存储空间（对博客图片来说几乎用不完）和 零流量费。 速度快：直接利用 Cloudflare 全球 CDN 加速。 无需备案：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://rath02.top/2026/01/16/hello-world/index.html">
+<meta property="og:title" content="图床教程">
+<meta property="og:url" content="https://rath02.top/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="Eternal">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="推荐方案：Cloudflare R2 + PicGo这是目前最推荐给使用了 Cloudflare 用户的方案。  为什么选它？ 完全免费：Cloudflare R2 提供 10GB 的免费存储空间（对博客图片来说几乎用不完）和 零流量费。 速度快：直接利用 Cloudflare 全球 CDN 加速。 无需备案：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-01-15T16:15:18.552Z">
-<meta property="article:modified_time" content="2026-01-16T08:54:36.639Z">
+<meta property="article:published_time" content="2026-01-16T10:09:54.000Z">
+<meta property="article:modified_time" content="2026-01-16T10:19:54.670Z">
 <meta property="article:author" content="Rath02">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="图床">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://rath02.top/2026/01/16/hello-world/">
+<link rel="canonical" href="https://rath02.top/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/">
 
 
 <script id="page-configurations">
@@ -47,7 +49,7 @@
   };
 </script>
 
-  <title>Hello World | Eternal</title>
+  <title>图床教程 | Eternal</title>
   
 
 
@@ -200,7 +202,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://rath02.top/2026/01/16/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://rath02.top/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -213,7 +215,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          图床教程
         </h1>
 
         <div class="post-meta">
@@ -224,7 +226,16 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2026-01-16 00:15:18 / 修改时间：16:54:36" itemprop="dateCreated datePublished" datetime="2026-01-16T00:15:18+08:00">2026-01-16</time>
+              <time title="创建时间：2026-01-16 18:09:54 / 修改时间：18:19:54" itemprop="dateCreated datePublished" datetime="2026-01-16T18:09:54+08:00">2026-01-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
             </span>
 
           <br>
@@ -233,7 +244,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.1k</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -252,25 +263,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">    interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>(DbType.MYSQL));</span><br><span class="line">    <span class="keyword">return</span> interceptor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>既然你已经在用 <strong>Cloudflare</strong> 托管域名 DNS，且博客部署在 GitHub Pages，这里有一个<strong>完美契合你现有架构、免费、无需备案、且速度极快</strong>的“真·终极”方案：</p>
-<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
+        <h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
 <ul>
 <li><strong>为什么选它？</strong><ol>
 <li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
@@ -364,17 +357,21 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag"># 图床</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/" rel="next" title="图床教程">
-      图床教程 <i class="fa fa-chevron-right"></i>
+    <a href="/2026/01/16/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -454,7 +451,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E6%96%B9%E6%A1%88%EF%BC%9ACloudflare-R2-PicGo"><span class="nav-number">1.5.</span> <span class="nav-text">推荐方案：Cloudflare R2 + PicGo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B"><span class="nav-number">1.6.</span> <span class="nav-text">配置保姆级教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%9C%A8-Cloudflare-%E5%BC%80%E5%90%AF-R2-%E5%AD%98%E5%82%A8%E6%A1%B6"><span class="nav-number">1.6.1.</span> <span class="nav-text">第一步：在 Cloudflare 开启 R2 存储桶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%BB%91%E5%AE%9A%E4%BD%A0%E7%9A%84%E5%9F%9F%E5%90%8D-%E5%85%B3%E9%94%AE"><span class="nav-number">1.6.2.</span> <span class="nav-text">第二步：绑定你的域名 (关键)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E8%8E%B7%E5%8F%96-API-%E5%AF%86%E9%92%A5"><span class="nav-number">1.6.3.</span> <span class="nav-text">第三步：获取 API 密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE-PicGo"><span class="nav-number">1.6.4.</span> <span class="nav-text">第四步：配置 PicGo</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E6%96%B9%E6%A1%88%EF%BC%9ACloudflare-R2-PicGo"><span class="nav-number">1.</span> <span class="nav-text">推荐方案：Cloudflare R2 + PicGo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">配置保姆级教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%9C%A8-Cloudflare-%E5%BC%80%E5%90%AF-R2-%E5%AD%98%E5%82%A8%E6%A1%B6"><span class="nav-number">2.1.</span> <span class="nav-text">第一步：在 Cloudflare 开启 R2 存储桶</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%BB%91%E5%AE%9A%E4%BD%A0%E7%9A%84%E5%9F%9F%E5%90%8D-%E5%85%B3%E9%94%AE"><span class="nav-number">2.2.</span> <span class="nav-text">第二步：绑定你的域名 (关键)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E8%8E%B7%E5%8F%96-API-%E5%AF%86%E9%92%A5"><span class="nav-number">2.3.</span> <span class="nav-text">第三步：获取 API 密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE-PicGo"><span class="nav-number">2.4.</span> <span class="nav-text">第四步：配置 PicGo</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

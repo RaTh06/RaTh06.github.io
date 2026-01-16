@@ -197,6 +197,153 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rath02.top/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rath02">
+      <meta itemprop="description" content="花和人都会遇到各种各样的不幸，但是生命的长河是无止境的。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eternal">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">图床教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-01-16 18:09:54 / 修改时间：18:19:54" itemprop="dateCreated datePublished" datetime="2026-01-16T18:09:54+08:00">2026-01-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
+<ul>
+<li><strong>为什么选它？</strong><ol>
+<li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
+<li><strong>速度快</strong>：直接利用 Cloudflare 全球 CDN 加速。</li>
+<li><strong>无需备案</strong>：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国内备案流程。</li>
+<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名.com</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="配置保姆级教程"><a href="#配置保姆级教程" class="headerlink" title="配置保姆级教程"></a>配置保姆级教程</h3><h4 id="第一步：在-Cloudflare-开启-R2-存储桶"><a href="#第一步：在-Cloudflare-开启-R2-存储桶" class="headerlink" title="第一步：在 Cloudflare 开启 R2 存储桶"></a>第一步：在 Cloudflare 开启 R2 存储桶</h4><ol>
+<li>登录 <a target="_blank" rel="noopener" href="https://www.google.com/search?q=https://dash.cloudflare.com/">Cloudflare Dashboard</a>。</li>
+<li>在左侧菜单找到 <strong>R2</strong>（如果没开通，点击启用，需要绑定信用卡或 PayPal 验证，但<strong>不会扣费</strong>，只要你没超过 10GB）。</li>
+<li>点击 <strong>“Create bucket” (创建存储桶)</strong>。<ul>
+<li><strong>Bucket name</strong>: 随便起，比如 <code>blog-imgs</code>。</li>
+<li><strong>Location</strong>: 建议选 <code>Automatic</code> 或 <code>North America</code> (因为你的博客在 GitHub Pages，美西节点连接顺畅)。</li>
+<li>点击 <strong>Create bucket</strong>。</li>
+</ul>
+</li>
+</ol>
+<h4 id="第二步：绑定你的域名-关键"><a href="#第二步：绑定你的域名-关键" class="headerlink" title="第二步：绑定你的域名 (关键)"></a>第二步：绑定你的域名 (关键)</h4><ol>
+<li>进入刚才创建的 bucket 页面。</li>
+<li>点击顶部的 <strong>“Settings” (设置)</strong> 标签。</li>
+<li>向下滚动找到 <strong>“Public Access” (公开访问)</strong> -&gt; <strong>“Custom Domains” (自定义域)</strong>。</li>
+<li>点击 <strong>“Connect Domain”</strong>。</li>
+<li>输入你想用的二级域名，比如 <code>img.你的域名.com</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
+<li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
+<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名.com/图片名.png</code> 访问了。</li>
+</ol>
+<h4 id="第三步：获取-API-密钥"><a href="#第三步：获取-API-密钥" class="headerlink" title="第三步：获取 API 密钥"></a>第三步：获取 API 密钥</h4><p>为了让 PicGo 能上传图片，你需要“钥匙”。</p>
+<ol>
+<li>回到 R2 的主界面（列出所有 bucket 的那个页面）。</li>
+<li>在右侧找到 <strong>“Manage R2 API Tokens”</strong>。</li>
+<li>点击 <strong>“Create API Token”</strong>。</li>
+<li><strong>Permissions</strong>: 选择 <strong>Admin Read &amp; Write</strong> (读写权限)。</li>
+<li><strong>TTL</strong>: 选 <code>Forever</code> (永久)。</li>
+<li>点击 <strong>Create API Token</strong>。</li>
+<li><strong>重要：</strong> 屏幕上会显示 <code>Access Key ID</code> 和 <code>Secret Access Key</code>，<strong>立刻复制保存下来</strong>，这个页面关了就再也看不到了。</li>
+</ol>
+<h4 id="第四步：配置-PicGo"><a href="#第四步：配置-PicGo" class="headerlink" title="第四步：配置 PicGo"></a>第四步：配置 PicGo</h4><p>PicGo 原生不支持 R2，需要安装一个插件（因为 R2 兼容 AWS S3 协议）。</p>
+<ol>
+<li>打开 <strong>PicGo</strong> -&gt; <strong>插件设置</strong>。</li>
+<li>搜索安装 <code>picgo-plugin-s3</code> (注意是 s3，不是 aws-s3，推荐用 <code>s3</code> 插件更轻量，或者 <code>picgo-plugin-aws-s3</code> 也可以)。<ul>
+<li><em>如果安装失败，可能需要先安装 Node.js，或者多试几次。</em></li>
+</ul>
+</li>
+<li>安装好后，点击 <strong>图床设置</strong> -&gt; <strong>Amazon S3</strong> (插件装好后会出现这个选项)。</li>
+<li><strong>填入配置：</strong><ul>
+<li><strong>图床配置名</strong>: <code>R2</code> (随便填)</li>
+<li><strong>应用密钥 ID (AccessKeyID)</strong>: 刚才复制的 Access Key ID。</li>
+<li><strong>应用密钥 (SecretAccessKey)</strong>: 刚才复制的 Secret Access Key。</li>
+<li><strong>桶名 (Bucket)</strong>: 你创建的 bucket 名字 (比如 <code>blog-imgs</code>)。</li>
+<li><strong>文件路径</strong>: <code>{year}/{month}/{fileName}</code> (可选，按年月分类)。</li>
+<li><strong>地区 (Region)</strong>: <code>auto</code> (如果你一定要填，填 <code>us-east-1</code>，但在 Cloudflare R2 中通常填 <code>auto</code> 或留空)。</li>
+<li><strong>自定义节点 (Endpoint)</strong>: <strong>这是关键！</strong><ul>
+<li>回到 Cloudflare R2 界面，在 bucket 详情页，你会看到一个 <strong>“S3 API”</strong> 的链接，通常长这样：<code>https://&lt;你的账号ID&gt;.r2.cloudflarestorage.com</code>。</li>
+<li><strong>把这个链接填进去。</strong> (注意：<strong>不要</strong>在后面加 bucket 名字)。</li>
+</ul>
+</li>
+<li><strong>自定义域名</strong>: <code>https://img.你的域名.com</code> (刚才绑定的那个二级域名)。</li>
+<li><strong>强制路径样式 (ForcePathStyle)</strong>: 选 <code>否</code> (或者如果不成功改选 <code>是</code> 试试)。</li>
+</ul>
+</li>
+<li>点击 <strong>确定</strong> 并 <strong>设为默认图床</strong>。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://rath02.top/2026/01/16/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -222,7 +369,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2026-01-16 00:15:18 / 修改时间：16:17:15" itemprop="dateCreated datePublished" datetime="2026-01-16T00:15:18+08:00">2026-01-16</time>
+              <time title="创建时间：2026-01-16 00:15:18 / 修改时间：16:54:36" itemprop="dateCreated datePublished" datetime="2026-01-16T00:15:18+08:00">2026-01-16</time>
             </span>
 
           <br>
@@ -231,14 +378,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>299</span>
+              <span>2.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -264,8 +411,14 @@
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">    interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>(DbType.MYSQL));</span><br><span class="line">    <span class="keyword">return</span> interceptor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2026/01/16/hello-world/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -310,6 +463,27 @@
   }
 </script>
 
+
+
+<div class="comments" style="margin-top: 20px;">
+  <script src="https://giscus.app/client.js"
+        data-repo="RaTh06/RaTh06.github.io"
+        data-repo-id="R_kgDOQ6hI3A"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOQ6hI3M4C1Bhn"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+  </script>
+</div>
+
         </div>
           
   
@@ -348,9 +522,19 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
       </div>
   </nav>
 </div>
