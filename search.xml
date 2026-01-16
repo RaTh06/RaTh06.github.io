@@ -54,6 +54,8 @@
 <li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
 <li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名.com/图片名.png</code> 访问了。</li>
 </ol>
+<span id="more"></span>
+
 <h4 id="第三步：获取-API-密钥"><a href="#第三步：获取-API-密钥" class="headerlink" title="第三步：获取 API 密钥"></a>第三步：获取 API 密钥</h4><p>为了让 PicGo 能上传图片，你需要“钥匙”。</p>
 <ol>
 <li>回到 R2 的主界面（列出所有 bucket 的那个页面）。</li>
