@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2026/01/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">    interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>(DbType.MYSQL));</span><br><span class="line">    <span class="keyword">return</span> interceptor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>图床教程</title>
     <url>/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
@@ -69,6 +90,7 @@
 </li>
 <li>点击 <strong>确定</strong> 并 <strong>设为默认图床</strong>。</li>
 </ol>
+<p><img src="https://img.rath02.top/" alt="image-20260116212322782"></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -77,94 +99,5 @@
         <tag>图床</tag>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2026/01/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> MybatisPlusInterceptor <span class="title function_">mybatisPlusInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">MybatisPlusInterceptor</span> <span class="variable">interceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MybatisPlusInterceptor</span>();</span><br><span class="line">    interceptor.addInnerInterceptor(<span class="keyword">new</span> <span class="title class_">PaginationInnerInterceptor</span>(DbType.MYSQL));</span><br><span class="line">    <span class="keyword">return</span> interceptor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>既然你已经在用 <strong>Cloudflare</strong> 托管域名 DNS，且博客部署在 GitHub Pages，这里有一个<strong>完美契合你现有架构、免费、无需备案、且速度极快</strong>的“真·终极”方案：</p>
-<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
-<ul>
-<li><strong>为什么选它？</strong><ol>
-<li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
-<li><strong>速度快</strong>：直接利用 Cloudflare 全球 CDN 加速。</li>
-<li><strong>无需备案</strong>：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国内备案流程。</li>
-<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名.com</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
-</ol>
-</li>
-</ul>
-<hr>
-<h3 id="配置保姆级教程"><a href="#配置保姆级教程" class="headerlink" title="配置保姆级教程"></a>配置保姆级教程</h3><h4 id="第一步：在-Cloudflare-开启-R2-存储桶"><a href="#第一步：在-Cloudflare-开启-R2-存储桶" class="headerlink" title="第一步：在 Cloudflare 开启 R2 存储桶"></a>第一步：在 Cloudflare 开启 R2 存储桶</h4><ol>
-<li>登录 <a href="https://www.google.com/search?q=https://dash.cloudflare.com/">Cloudflare Dashboard</a>。</li>
-<li>在左侧菜单找到 <strong>R2</strong>（如果没开通，点击启用，需要绑定信用卡或 PayPal 验证，但<strong>不会扣费</strong>，只要你没超过 10GB）。</li>
-<li>点击 <strong>“Create bucket” (创建存储桶)</strong>。<ul>
-<li><strong>Bucket name</strong>: 随便起，比如 <code>blog-imgs</code>。</li>
-<li><strong>Location</strong>: 建议选 <code>Automatic</code> 或 <code>North America</code> (因为你的博客在 GitHub Pages，美西节点连接顺畅)。</li>
-<li>点击 <strong>Create bucket</strong>。</li>
-</ul>
-</li>
-</ol>
-<h4 id="第二步：绑定你的域名-关键"><a href="#第二步：绑定你的域名-关键" class="headerlink" title="第二步：绑定你的域名 (关键)"></a>第二步：绑定你的域名 (关键)</h4><ol>
-<li>进入刚才创建的 bucket 页面。</li>
-<li>点击顶部的 <strong>“Settings” (设置)</strong> 标签。</li>
-<li>向下滚动找到 <strong>“Public Access” (公开访问)</strong> -&gt; <strong>“Custom Domains” (自定义域)</strong>。</li>
-<li>点击 <strong>“Connect Domain”</strong>。</li>
-<li>输入你想用的二级域名，比如 <code>img.你的域名.com</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
-<li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
-<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名.com/图片名.png</code> 访问了。</li>
-</ol>
-<h4 id="第三步：获取-API-密钥"><a href="#第三步：获取-API-密钥" class="headerlink" title="第三步：获取 API 密钥"></a>第三步：获取 API 密钥</h4><p>为了让 PicGo 能上传图片，你需要“钥匙”。</p>
-<ol>
-<li>回到 R2 的主界面（列出所有 bucket 的那个页面）。</li>
-<li>在右侧找到 <strong>“Manage R2 API Tokens”</strong>。</li>
-<li>点击 <strong>“Create API Token”</strong>。</li>
-<li><strong>Permissions</strong>: 选择 <strong>Admin Read &amp; Write</strong> (读写权限)。</li>
-<li><strong>TTL</strong>: 选 <code>Forever</code> (永久)。</li>
-<li>点击 <strong>Create API Token</strong>。</li>
-<li><strong>重要：</strong> 屏幕上会显示 <code>Access Key ID</code> 和 <code>Secret Access Key</code>，<strong>立刻复制保存下来</strong>，这个页面关了就再也看不到了。</li>
-</ol>
-<h4 id="第四步：配置-PicGo"><a href="#第四步：配置-PicGo" class="headerlink" title="第四步：配置 PicGo"></a>第四步：配置 PicGo</h4><p>PicGo 原生不支持 R2，需要安装一个插件（因为 R2 兼容 AWS S3 协议）。</p>
-<ol>
-<li>打开 <strong>PicGo</strong> -&gt; <strong>插件设置</strong>。</li>
-<li>搜索安装 <code>picgo-plugin-s3</code> (注意是 s3，不是 aws-s3，推荐用 <code>s3</code> 插件更轻量，或者 <code>picgo-plugin-aws-s3</code> 也可以)。<ul>
-<li><em>如果安装失败，可能需要先安装 Node.js，或者多试几次。</em></li>
-</ul>
-</li>
-<li>安装好后，点击 <strong>图床设置</strong> -&gt; <strong>Amazon S3</strong> (插件装好后会出现这个选项)。</li>
-<li><strong>填入配置：</strong><ul>
-<li><strong>图床配置名</strong>: <code>R2</code> (随便填)</li>
-<li><strong>应用密钥 ID (AccessKeyID)</strong>: 刚才复制的 Access Key ID。</li>
-<li><strong>应用密钥 (SecretAccessKey)</strong>: 刚才复制的 Secret Access Key。</li>
-<li><strong>桶名 (Bucket)</strong>: 你创建的 bucket 名字 (比如 <code>blog-imgs</code>)。</li>
-<li><strong>文件路径</strong>: <code>{year}/{month}/{fileName}</code> (可选，按年月分类)。</li>
-<li><strong>地区 (Region)</strong>: <code>auto</code> (如果你一定要填，填 <code>us-east-1</code>，但在 Cloudflare R2 中通常填 <code>auto</code> 或留空)。</li>
-<li><strong>自定义节点 (Endpoint)</strong>: <strong>这是关键！</strong><ul>
-<li>回到 Cloudflare R2 界面，在 bucket 详情页，你会看到一个 <strong>“S3 API”</strong> 的链接，通常长这样：<code>https://&lt;你的账号ID&gt;.r2.cloudflarestorage.com</code>。</li>
-<li><strong>把这个链接填进去。</strong> (注意：<strong>不要</strong>在后面加 bucket 名字)。</li>
-</ul>
-</li>
-<li><strong>自定义域名</strong>: <code>https://img.你的域名.com</code> (刚才绑定的那个二级域名)。</li>
-<li><strong>强制路径样式 (ForcePathStyle)</strong>: 选 <code>否</code> (或者如果不成功改选 <code>是</code> 试试)。</li>
-</ul>
-</li>
-<li>点击 <strong>确定</strong> 并 <strong>设为默认图床</strong>。</li>
-</ol>
-]]></content>
   </entry>
 </search>
