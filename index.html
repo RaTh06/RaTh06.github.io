@@ -197,6 +197,116 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://rath02.top/2026/01/17/hexo%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Rath02">
+      <meta itemprop="description" content="花和人都会遇到各种各样的不幸，但是生命的长河是无止境的。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eternal">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2026/01/17/hexo%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/" class="post-title-link" itemprop="url">hexo部署与域名解析</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2026-01-17 00:36:43 / 修改时间：00:41:42" itemprop="dateCreated datePublished" datetime="2026-01-17T00:36:43+08:00">2026-01-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>472</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul>
+<li><strong>新建仓库</strong>：在 GitHub 上创建一个名为 <code>rath06.github.io</code> 的公开仓库。</li>
+<li><strong>获取地址</strong>：点击 <strong>Code</strong> 按钮，复制 <strong>SSH</strong> 链接：<code>git@github.com:rath06/rath06.github.io.git</code>。</li>
+</ul>
+<h2 id="域名解析-Cloudflare"><a href="#域名解析-Cloudflare" class="headerlink" title="域名解析 (Cloudflare)"></a>域名解析 (Cloudflare)</h2><ul>
+<li><strong>CNAME 记录 1</strong>：添加名称为 <code>@</code> 的 CNAME 记录，目标指向 <code>rath06.github.io</code>。</li>
+<li><strong>CNAME 记录 2</strong>：添加名称为 <code>www</code> 的 CNAME 记录，目标指向 <code>rath06.github.io</code>。</li>
+<li><strong>SSL 模式</strong>：在 SSL&#x2F;TLS 选项中，将模式设置为 <strong>“完全 (Full)”</strong>。</li>
+</ul>
+<h2 id="本地环境配置"><a href="#本地环境配置" class="headerlink" title="本地环境配置"></a>本地环境配置</h2><ul>
+<li><p><strong>CNAME 文件</strong>：在 <code>D:\Blog\source\</code> 目录下新建文件 <code>CNAME</code>（无后缀），内容写入 <code>rath02.top</code>。</p>
+</li>
+<li><p><strong>修改站点配置</strong>：打开博客根目录 <code>_config.yml</code>，修改以下字段：</p>
+<ul>
+<li><p><code>url: https://rath02.top</code></p>
+</li>
+<li><p><code>deploy</code> 部分修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:rath06/rath06.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>安装插件</strong>：在终端运行 <code>npm install hexo-deployer-git --save</code>。</p>
+</li>
+</ul>
+<h2 id="部署命令"><a href="#部署命令" class="headerlink" title="部署命令"></a>部署命令</h2><p>在博客根目录依次执行：</p>
+<ol>
+<li><code>hexo clean</code></li>
+<li><code>hexo g</code></li>
+<li><code>hexo d</code></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://rath02.top/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -222,7 +332,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2026-01-16 18:09:54 / 修改时间：21:39:22" itemprop="dateCreated datePublished" datetime="2026-01-16T18:09:54+08:00">2026-01-16</time>
+              <time title="创建时间：2026-01-16 18:09:54 / 修改时间：23:17:38" itemprop="dateCreated datePublished" datetime="2026-01-16T18:09:54+08:00">2026-01-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -340,7 +450,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2026-01-16 00:15:18 / 修改时间：20:32:59" itemprop="dateCreated datePublished" datetime="2026-01-16T00:15:18+08:00">2026-01-16</time>
+              <time title="创建时间：2026-01-16 00:15:18 / 修改时间：23:27:32" itemprop="dateCreated datePublished" datetime="2026-01-16T00:15:18+08:00">2026-01-16</time>
             </span>
 
           <br>
@@ -490,7 +600,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -501,7 +611,7 @@
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
