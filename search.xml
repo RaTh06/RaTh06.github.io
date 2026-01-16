@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2026/01/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<span id="more"></span>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>hexo部署与域名解析</title>
     <url>/2026/01/17/hexo%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul>
@@ -64,6 +44,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2026/01/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>图床教程</title>
     <url>/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
@@ -72,7 +72,7 @@
 <li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
 <li><strong>速度快</strong>：直接利用 Cloudflare 全球 CDN 加速。</li>
 <li><strong>无需备案</strong>：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国内备案流程。</li>
-<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名.com</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
+<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
 </ol>
 </li>
 </ul>
@@ -92,9 +92,9 @@
 <li>点击顶部的 <strong>“Settings” (设置)</strong> 标签。</li>
 <li>向下滚动找到 <strong>“Public Access” (公开访问)</strong> -&gt; <strong>“Custom Domains” (自定义域)</strong>。</li>
 <li>点击 <strong>“Connect Domain”</strong>。</li>
-<li>输入你想用的二级域名，比如 <code>img.你的域名.com</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
+<li>输入你想用的二级域名，比如 <code>img.你的域名</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
 <li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
-<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名.com/图片名.png</code> 访问了。</li>
+<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名/图片名.png</code> 访问了。</li>
 </ol>
 <span id="more"></span>
 
@@ -128,7 +128,7 @@
 <li><strong>把这个链接填进去。</strong> (注意：<strong>不要</strong>在后面加 bucket 名字)。</li>
 </ul>
 </li>
-<li><strong>自定义域名</strong>: <code>https://img.你的域名.com</code> (刚才绑定的那个二级域名)。</li>
+<li><strong>自定义域名</strong>: <code>https://img.你的域名/{path}</code> (刚才绑定的那个二级域名)。</li>
 <li><strong>强制路径样式 (ForcePathStyle)</strong>: 选 <code>否</code> (或者如果不成功改选 <code>是</code> 试试)。</li>
 </ul>
 </li>
