@@ -21,63 +21,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>编译原理(华保健)</title>
-    <url>/2026/01/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E5%8D%8E%E4%BF%9D%E5%81%A5/</url>
-    <content><![CDATA[<h2 id="chapter-1"><a href="#chapter-1" class="headerlink" title="chapter 1"></a>chapter 1</h2><h3 id="1-1-1-编译器概述"><a href="#1-1-1-编译器概述" class="headerlink" title="1.1.1 编译器概述"></a>1.1.1 编译器概述</h3><h4 id="什么是编译器"><a href="#什么是编译器" class="headerlink" title="什么是编译器"></a>什么是编译器</h4><ul>
-<li>编译器是一个程序</li>
-<li>核心功能是把源代码翻译成目标代码<ul>
-<li>源代码：C&#x2F;C++，Java，C#，html，SQL，…</li>
-<li>目标代码：x86，IA64，ARM，MIPS，…</li>
-</ul>
-</li>
-</ul>
-<h4 id="编译器的核心功能"><a href="#编译器的核心功能" class="headerlink" title="编译器的核心功能"></a>编译器的核心功能</h4><ol>
-<li><strong>翻译阶段：</strong> 源代码 $\rightarrow$ 编译器(<strong>静态计算</strong>) $\rightarrow$ 目标程序</li>
-<li><strong>执行阶段：</strong> 目标程序 $\rightarrow$ 计算机(<strong>动态计算</strong>) $\rightarrow$ 计算结果</li>
-</ol>
-<h4 id="编译器和解释器"><a href="#编译器和解释器" class="headerlink" title="编译器和解释器"></a>编译器和解释器</h4><blockquote>
-<p>解释器也是处理程序的一种<strong>程序</strong></p>
-</blockquote>
-<p><img src="https://img.rath02.top/2026/01/image-20260120183150240" alt="image-20260120183150240"></p>
-<h4 id="编译器简史"><a href="#编译器简史" class="headerlink" title="编译器简史"></a>编译器简史</h4><ol>
-<li>历史首创</li>
-</ol>
-<ul>
-<li>第一个编译器：计算机科学史上出现的第一个编译器是<strong>Fortran语言</strong>的编译器</li>
-<li>研发时间：1954年至1957年</li>
-<li>核心人物：由<code>John Backus</code>领导开发</li>
-</ul>
-<ol start="2">
-<li>重大影响</li>
-</ol>
-<ul>
-<li>理论层面：推动了<strong>算法、数据结构、形式语言与自动机</strong>等理论的发展</li>
-<li>实践层面：促进了<strong>软件工程、体系结构</strong>等领域的进步</li>
-<li>技术架构：确立了现代<strong>编译器架构</strong>的基础</li>
-</ul>
-<h4 id="为什么学习编译原理"><a href="#为什么学习编译原理" class="headerlink" title="为什么学习编译原理"></a>为什么学习编译原理</h4><ul>
-<li>编译原理集中体现了计算机科学的很多核心思想</li>
-<li>编译器是其它领域的重要研究基础</li>
-<li>编译器本身就是非常重要的研究领域<ul>
-<li>新的语言设计</li>
-<li>大型软件的构造和维护</li>
-</ul>
-</li>
-</ul>
-<h4 id="如何学好编译原理"><a href="#如何学好编译原理" class="headerlink" title="如何学好编译原理"></a>如何学好编译原理</h4><ol>
-<li><strong>理论</strong>：深入学习掌握各种算法和数据结构。</li>
-<li><strong>实践</strong>：切实提高将理论应用于解决实际问题的能力。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>编译原理</tag>
-        <tag>底层逻辑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo部署与域名解析</title>
     <url>/2026/01/17/hexo%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul>
@@ -317,6 +260,63 @@
       <tags>
         <tag>零基础</tag>
         <tag>高数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编译原理(华保健)</title>
+    <url>/2026/01/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E5%8D%8E%E4%BF%9D%E5%81%A5/</url>
+    <content><![CDATA[<h2 id="chapter-1"><a href="#chapter-1" class="headerlink" title="chapter 1"></a>chapter 1</h2><h3 id="1-1-1-编译器概述"><a href="#1-1-1-编译器概述" class="headerlink" title="1.1.1 编译器概述"></a>1.1.1 编译器概述</h3><h4 id="什么是编译器"><a href="#什么是编译器" class="headerlink" title="什么是编译器"></a>什么是编译器</h4><ul>
+<li>编译器是一个程序</li>
+<li>核心功能是把源代码翻译成目标代码<ul>
+<li>源代码：C&#x2F;C++，Java，C#，html，SQL，…</li>
+<li>目标代码：x86，IA64，ARM，MIPS，…</li>
+</ul>
+</li>
+</ul>
+<h4 id="编译器的核心功能"><a href="#编译器的核心功能" class="headerlink" title="编译器的核心功能"></a>编译器的核心功能</h4><ol>
+<li><strong>翻译阶段：</strong> 源代码 $\rightarrow$ 编译器(<strong>静态计算</strong>) $\rightarrow$ 目标程序</li>
+<li><strong>执行阶段：</strong> 目标程序 $\rightarrow$ 计算机(<strong>动态计算</strong>) $\rightarrow$ 计算结果</li>
+</ol>
+<h4 id="编译器和解释器"><a href="#编译器和解释器" class="headerlink" title="编译器和解释器"></a>编译器和解释器</h4><blockquote>
+<p>解释器也是处理程序的一种<strong>程序</strong></p>
+</blockquote>
+<p><img src="https://img.rath02.top/2026/01/image-20260120183150240" alt="image-20260120183150240"></p>
+<h4 id="编译器简史"><a href="#编译器简史" class="headerlink" title="编译器简史"></a>编译器简史</h4><ol>
+<li>历史首创</li>
+</ol>
+<ul>
+<li>第一个编译器：计算机科学史上出现的第一个编译器是<strong>Fortran语言</strong>的编译器</li>
+<li>研发时间：1954年至1957年</li>
+<li>核心人物：由<code>John Backus</code>领导开发</li>
+</ul>
+<ol start="2">
+<li>重大影响</li>
+</ol>
+<ul>
+<li>理论层面：推动了<strong>算法、数据结构、形式语言与自动机</strong>等理论的发展</li>
+<li>实践层面：促进了<strong>软件工程、体系结构</strong>等领域的进步</li>
+<li>技术架构：确立了现代<strong>编译器架构</strong>的基础</li>
+</ul>
+<h4 id="为什么学习编译原理"><a href="#为什么学习编译原理" class="headerlink" title="为什么学习编译原理"></a>为什么学习编译原理</h4><ul>
+<li>编译原理集中体现了计算机科学的很多核心思想</li>
+<li>编译器是其它领域的重要研究基础</li>
+<li>编译器本身就是非常重要的研究领域<ul>
+<li>新的语言设计</li>
+<li>大型软件的构造和维护</li>
+</ul>
+</li>
+</ul>
+<h4 id="如何学好编译原理"><a href="#如何学好编译原理" class="headerlink" title="如何学好编译原理"></a>如何学好编译原理</h4><ol>
+<li><strong>理论</strong>：深入学习掌握各种算法和数据结构。</li>
+<li><strong>实践</strong>：切实提高将理论应用于解决实际问题的能力。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>编译原理</tag>
+        <tag>底层逻辑</tag>
       </tags>
   </entry>
   <entry>
