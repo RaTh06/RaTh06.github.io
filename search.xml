@@ -1,107 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>编译原理(华保健)</title>
-    <url>/2026/01/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E5%8D%8E%E4%BF%9D%E5%81%A5/</url>
-    <content><![CDATA[<h2 id="chapter-1"><a href="#chapter-1" class="headerlink" title="chapter 1"></a>chapter 1</h2><h3 id="编译器概述"><a href="#编译器概述" class="headerlink" title="编译器概述"></a>编译器概述</h3><h4 id="什么是编译器"><a href="#什么是编译器" class="headerlink" title="什么是编译器"></a>什么是编译器</h4><ul>
-<li>编译器是一个程序</li>
-<li>核心功能是把源代码翻译成目标代码<ul>
-<li>源代码：C/C++，Java，C#，html，SQL，…</li>
-<li>目标代码：x86，IA64，ARM，MIPS，…</li>
-</ul>
-</li>
-</ul>
-<h4 id="编译器的核心功能"><a href="#编译器的核心功能" class="headerlink" title="编译器的核心功能"></a>编译器的核心功能</h4><ol>
-<li><strong>翻译阶段：</strong> 源代码 $\rightarrow$ 编译器(<strong>静态计算</strong>) $\rightarrow$ 目标程序</li>
-<li><strong>执行阶段：</strong> 目标程序 $\rightarrow$ 计算机(<strong>动态计算</strong>) $\rightarrow$ 计算结果</li>
-</ol>
-<h4 id="编译器和解释器"><a href="#编译器和解释器" class="headerlink" title="编译器和解释器"></a>编译器和解释器</h4><blockquote>
-<p>解释器也是处理程序的一种<strong>程序</strong></p>
-</blockquote>
-<p><img src="https://img.rath02.top/2026/01/image-20260120183150240" alt="image-20260120183150240"></p>
-<h4 id="编译器简史"><a href="#编译器简史" class="headerlink" title="编译器简史"></a>编译器简史</h4><ol>
-<li>历史首创</li>
-</ol>
-<ul>
-<li>第一个编译器：计算机科学史上出现的第一个编译器是<strong>Fortran语言</strong>的编译器</li>
-<li>研发时间：1954年至1957年</li>
-<li>核心人物：由<code>John Backus</code>领导开发</li>
-</ul>
-<ol>
-<li>重大影响</li>
-</ol>
-<ul>
-<li>理论层面：推动了<strong>算法、数据结构、形式语言与自动机</strong>等理论的发展</li>
-<li>实践层面：促进了<strong>软件工程、体系结构</strong>等领域的进步</li>
-<li>技术架构：确立了现代<strong>编译器架构</strong>的基础</li>
-</ul>
-<h4 id="为什么学习编译原理"><a href="#为什么学习编译原理" class="headerlink" title="为什么学习编译原理"></a>为什么学习编译原理</h4><ul>
-<li>编译原理集中体现了计算机科学的很多核心思想</li>
-<li>编译器是其它领域的重要研究基础</li>
-<li>编译器本身就是非常重要的研究领域<ul>
-<li>新的语言设计</li>
-<li>大型软件的构造和维护</li>
-</ul>
-</li>
-</ul>
-<h4 id="如何学好编译原理"><a href="#如何学好编译原理" class="headerlink" title="如何学好编译原理"></a>如何学好编译原理</h4><ol>
-<li><strong>理论</strong>：深入学习掌握各种算法和数据结构。</li>
-<li><strong>实践</strong>：切实提高将理论应用于解决实际问题的能力。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>编译原理</tag>
-        <tag>底层逻辑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo部署与域名解析</title>
-    <url>/2026/01/17/hexo%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</url>
-    <content><![CDATA[<h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul>
-<li><strong>新建仓库</strong>：在 GitHub 上创建一个名为 <code>rath06.github.io</code> 的公开仓库。</li>
-<li><strong>获取地址</strong>：点击 <strong>Code</strong> 按钮，复制 <strong>SSH</strong> 链接：<code>git@github.com:rath06/rath06.github.io.git</code>。</li>
-</ul>
-<h2 id="域名解析-Cloudflare"><a href="#域名解析-Cloudflare" class="headerlink" title="域名解析 (Cloudflare)"></a>域名解析 (Cloudflare)</h2><ul>
-<li><strong>CNAME 记录 1</strong>：添加名称为 <code>@</code> 的 CNAME 记录，目标指向 <code>rath06.github.io</code>。</li>
-<li><strong>CNAME 记录 2</strong>：添加名称为 <code>www</code> 的 CNAME 记录，目标指向 <code>rath06.github.io</code>。</li>
-<li><strong>SSL 模式</strong>：在 SSL/TLS 选项中，将模式设置为 <strong>“完全 (Full)”</strong>。</li>
-</ul>
-<h2 id="本地环境配置"><a href="#本地环境配置" class="headerlink" title="本地环境配置"></a>本地环境配置</h2><ul>
-<li><p><strong>CNAME 文件</strong>：在 <code>D:\Blog\source\</code> 目录下新建文件 <code>CNAME</code>（无后缀），内容写入 <code>rath02.top</code>。</p>
-</li>
-<li><p><strong>修改站点配置</strong>：打开博客根目录 <code>_config.yml</code>，修改以下字段：</p>
-<ul>
-<li><p><code>url: https://rath02.top</code></p>
-</li>
-<li><p><code>deploy</code> 部分修改为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:rath06/rath06.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><strong>安装插件</strong>：在终端运行 <code>npm install hexo-deployer-git --save</code>。</p>
-</li>
-</ul>
-<h2 id="部署命令"><a href="#部署命令" class="headerlink" title="部署命令"></a>部署命令</h2><p>在博客根目录依次执行：</p>
-<ol>
-<li><code>hexo clean</code></li>
-<li><code>hexo g</code></li>
-<li><code>hexo d</code></li>
-</ol>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>域名解析</tag>
-        <tag>GitHub</tag>
-        <tag>cloudflare</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>图床教程</title>
     <url>/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
@@ -177,8 +76,173 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>图床</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编译原理(华保健)</title>
+    <url>/2026/01/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86-%E5%8D%8E%E4%BF%9D%E5%81%A5/</url>
+    <content><![CDATA[<h2 id="chapter-1"><a href="#chapter-1" class="headerlink" title="chapter 1"></a>chapter 1</h2><h3 id="编译器概述"><a href="#编译器概述" class="headerlink" title="编译器概述"></a>编译器概述</h3><h4 id="什么是编译器"><a href="#什么是编译器" class="headerlink" title="什么是编译器"></a>什么是编译器</h4><ul>
+<li>编译器是一个程序</li>
+<li>核心功能是把源代码翻译成目标代码<ul>
+<li>源代码：C/C++，Java，C#，html，SQL，…</li>
+<li>目标代码：x86，IA64，ARM，MIPS，…</li>
+</ul>
+</li>
+</ul>
+<h4 id="编译器的核心功能"><a href="#编译器的核心功能" class="headerlink" title="编译器的核心功能"></a>编译器的核心功能</h4><ol>
+<li><strong>翻译阶段：</strong> 源代码 $\rightarrow$ 编译器(<strong>静态计算</strong>) $\rightarrow$ 目标程序</li>
+<li><strong>执行阶段：</strong> 目标程序 $\rightarrow$ 计算机(<strong>动态计算</strong>) $\rightarrow$ 计算结果</li>
+</ol>
+<h4 id="编译器和解释器"><a href="#编译器和解释器" class="headerlink" title="编译器和解释器"></a>编译器和解释器</h4><blockquote>
+<p>解释器也是处理程序的一种<strong>程序</strong></p>
+</blockquote>
+<p><img src="https://img.rath02.top/2026/01/image-20260120183150240" alt="image-20260120183150240"></p>
+<h4 id="编译器简史"><a href="#编译器简史" class="headerlink" title="编译器简史"></a>编译器简史</h4><ol>
+<li>历史首创</li>
+</ol>
+<ul>
+<li>第一个编译器：计算机科学史上出现的第一个编译器是<strong>Fortran语言</strong>的编译器</li>
+<li>研发时间：1954年至1957年</li>
+<li>核心人物：由<code>John Backus</code>领导开发</li>
+</ul>
+<ol>
+<li>重大影响</li>
+</ol>
+<ul>
+<li>理论层面：推动了<strong>算法、数据结构、形式语言与自动机</strong>等理论的发展</li>
+<li>实践层面：促进了<strong>软件工程、体系结构</strong>等领域的进步</li>
+<li>技术架构：确立了现代<strong>编译器架构</strong>的基础</li>
+</ul>
+<h4 id="为什么学习编译原理"><a href="#为什么学习编译原理" class="headerlink" title="为什么学习编译原理"></a>为什么学习编译原理</h4><ul>
+<li>编译原理集中体现了计算机科学的很多核心思想</li>
+<li>编译器是其它领域的重要研究基础</li>
+<li>编译器本身就是非常重要的研究领域<ul>
+<li>新的语言设计</li>
+<li>大型软件的构造和维护</li>
+</ul>
+</li>
+</ul>
+<h4 id="如何学好编译原理"><a href="#如何学好编译原理" class="headerlink" title="如何学好编译原理"></a>如何学好编译原理</h4><ol>
+<li><strong>理论</strong>：深入学习掌握各种算法和数据结构。</li>
+<li><strong>实践</strong>：切实提高将理论应用于解决实际问题的能力。</li>
+</ol>
+<h3 id="编译器结构"><a href="#编译器结构" class="headerlink" title="编译器结构"></a>编译器结构</h3><h4 id="编译器的高层结构"><a href="#编译器的高层结构" class="headerlink" title="编译器的高层结构"></a>编译器的高层结构</h4><blockquote>
+<p>编译器具有非常<strong>模块化</strong>的高层结构</p>
+</blockquote>
+<p><img src="https://img.rath02.top/2026/01/image-20260121145358500" alt="image-20260121145358500"></p>
+<h4 id="抽象的多个阶段-phase"><a href="#抽象的多个阶段-phase" class="headerlink" title="抽象的多个阶段(phase)"></a>抽象的多个阶段(phase)</h4><blockquote>
+<p>编译器可看出多个阶段构成的“流水线”结构</p>
+</blockquote>
+<p><img src="https://img.rath02.top/2026/01/image-20260121145809762" alt="image-20260121145809762"></p>
+<h4 id="一种没有优化的编译器结构"><a href="#一种没有优化的编译器结构" class="headerlink" title="一种没有优化的编译器结构"></a>一种没有优化的编译器结构</h4><p><img src="https://img.rath02.top/2026/01/image-20260121125814338" alt="image-20260121125814338"></p>
+<h4 id="一种更复杂的编译器结构"><a href="#一种更复杂的编译器结构" class="headerlink" title="一种更复杂的编译器结构"></a>一种更复杂的编译器结构</h4><p><img src="https://img.rath02.top/2026/01/image-20260121130244504" alt="image-20260121130244504"></p>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><ul>
+<li>编译器由多个阶段组成，每个阶段都要处理不同的问题<ul>
+<li>使用不同的理论、数据结构和算法</li>
+</ul>
+</li>
+<li>因此，编译器设计中的重要问题是如何合理的划分组织各个阶段<ul>
+<li>接口清晰</li>
+<li>编译器容易实现、维护</li>
+</ul>
+</li>
+</ul>
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><ul>
+<li>源语言：加法表达式语言<code>Sum</code><ul>
+<li>两种语法形式：<ul>
+<li>整型数字n</li>
+<li>加法e1+e2</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">3</span><br><span class="line">3+5</span><br><span class="line">3+4+5 (结合性，加法满足左结合)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>目标机器：栈式计算机<code>Stack</code><ul>
+<li>两条指令：<ul>
+<li><code>push n</code></li>
+<li><code>add</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">push 3 // 将3这个元素压入栈中</span><br><span class="line">push 4 // 将4这个元素压入栈中</span><br><span class="line">push 5 // 将5这个元素压入栈中</span><br><span class="line">push 6 // 将6这个元素压入栈中</span><br><span class="line">add:</span><br><span class="line">&#123;</span><br><span class="line"><span class="code">	x = pop(); // 6元素被弹出</span></span><br><span class="line"><span class="code">	y = pop(); // 5元素被弹出</span></span><br><span class="line"><span class="code">	z = x+y; // 11=6+5</span></span><br><span class="line"><span class="code">	push z; // 将11这个元素压入栈中</span></span><br><span class="line"><span class="code">&#125; </span></span><br><span class="line"><span class="code">最终栈中元素3、4、11（自底向上）</span></span><br></pre></td></tr></table></figure>
+<h4 id="编译器实现"><a href="#编译器实现" class="headerlink" title="编译器实现"></a>编译器实现</h4><blockquote>
+<p>任务：编译程序1+2+3到栈式计算机</p>
+</blockquote>
+<ol>
+<li><p>阶段一：词法语法分析</p>
+<p><strong>词法分析结果 (Tokens):</strong> <code>[INT:1], [PLUS:+], [INT:2], [PLUS:+], [INT:3]</code></p>
+<p><strong>语法规则:</strong> 遵循加法结合律（通常为左结合）。</p>
+</li>
+<li><p>阶段二：语法树构建</p>
+<p>根据语法分析的结果构建一颗<strong>抽象语法树</strong> (Abstract Syntax Tree)，AST 的后续遍历顺序直接决定了指令顺序。</p>
+</li>
+<li><p>阶段三：代码生成</p>
+<p>对 AST 进行 <strong>后序遍历 (Post-order Traversal)</strong>：先访问左子树，再访问右子树，最后访问根节点。这是因为在栈式计算机中，必须先将操作数压入栈，才能执行运算符。</p>
+</li>
+<li><p>阶段四：代码优化</p>
+<p>在编译阶段，可以进行<strong>常量折叠 (Constant Folding)</strong>。如果操作数在编译时已知，可以直接计算结果以减少运行时的指令数。</p>
+</li>
+</ol>
+<p><img src="https://img.rath02.top/2026/01/image-20260121153239451" alt="image-20260121153239451"></p>
+<p>流程结果：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>步骤</strong></th>
+<th><strong>指令</strong></th>
+<th><strong>栈状态 (底部 -&gt; 顶部)</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>PUSH 1</code></td>
+<td><code>[1]</code></td>
+<td>压入常量 1</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>PUSH 2</code></td>
+<td><code>[1, 2]</code></td>
+<td>压入常量 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>ADD</code></td>
+<td><code>[3]</code></td>
+<td>弹出 1, 2；压入 1+2=3</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>PUSH 3</code></td>
+<td><code>[3, 3]</code></td>
+<td>压入常量 3</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>ADD</code></td>
+<td><code>[6]</code></td>
+<td>弹出 3, 3；压入 3+3=6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">优化后的代码： </span><br><span class="line">PUSH 3</span><br><span class="line">PUSH 3</span><br><span class="line">ADD</span><br></pre></td></tr></table></figure>
+<h2 id="chapter-2"><a href="#chapter-2" class="headerlink" title="chapter 2"></a>chapter 2</h2><h3 id="词法分析的任务"><a href="#词法分析的任务" class="headerlink" title="词法分析的任务"></a>词法分析的任务</h3>]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>编译原理</tag>
+        <tag>底层逻辑</tag>
       </tags>
   </entry>
   <entry>
@@ -390,6 +454,50 @@ r = \sqrt{x^2 + y^2}</script>]]></content>
       <tags>
         <tag>零基础</tag>
         <tag>高数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo部署与域名解析</title>
+    <url>/2026/01/17/hexo%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul>
+<li><strong>新建仓库</strong>：在 GitHub 上创建一个名为 <code>rath06.github.io</code> 的公开仓库。</li>
+<li><strong>获取地址</strong>：点击 <strong>Code</strong> 按钮，复制 <strong>SSH</strong> 链接：<code>git@github.com:rath06/rath06.github.io.git</code>。</li>
+</ul>
+<h2 id="域名解析-Cloudflare"><a href="#域名解析-Cloudflare" class="headerlink" title="域名解析 (Cloudflare)"></a>域名解析 (Cloudflare)</h2><ul>
+<li><strong>CNAME 记录 1</strong>：添加名称为 <code>@</code> 的 CNAME 记录，目标指向 <code>rath06.github.io</code>。</li>
+<li><strong>CNAME 记录 2</strong>：添加名称为 <code>www</code> 的 CNAME 记录，目标指向 <code>rath06.github.io</code>。</li>
+<li><strong>SSL 模式</strong>：在 SSL/TLS 选项中，将模式设置为 <strong>“完全 (Full)”</strong>。</li>
+</ul>
+<h2 id="本地环境配置"><a href="#本地环境配置" class="headerlink" title="本地环境配置"></a>本地环境配置</h2><ul>
+<li><p><strong>CNAME 文件</strong>：在 <code>D:\Blog\source\</code> 目录下新建文件 <code>CNAME</code>（无后缀），内容写入 <code>rath02.top</code>。</p>
+</li>
+<li><p><strong>修改站点配置</strong>：打开博客根目录 <code>_config.yml</code>，修改以下字段：</p>
+<ul>
+<li><p><code>url: https://rath02.top</code></p>
+</li>
+<li><p><code>deploy</code> 部分修改为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:rath06/rath06.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>安装插件</strong>：在终端运行 <code>npm install hexo-deployer-git --save</code>。</p>
+</li>
+</ul>
+<h2 id="部署命令"><a href="#部署命令" class="headerlink" title="部署命令"></a>部署命令</h2><p>在博客根目录依次执行：</p>
+<ol>
+<li><code>hexo clean</code></li>
+<li><code>hexo g</code></li>
+<li><code>hexo d</code></li>
+</ol>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>域名解析</tag>
+        <tag>GitHub</tag>
+        <tag>cloudflare</tag>
       </tags>
   </entry>
 </search>
