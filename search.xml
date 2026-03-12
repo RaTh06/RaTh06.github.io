@@ -1,158 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Data Structure</title>
-    <url>/2026/03/10/Data-Structure/</url>
-    <content><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="1-绪论"><a href="#1-绪论" class="headerlink" title="1 绪论"></a>1 绪论</h2><h3 id="1-1-数据结构的基本概念"><a href="#1-1-数据结构的基本概念" class="headerlink" title="1.1 数据结构的基本概念"></a>1.1 数据结构的基本概念</h3><p>1.数据：数据就是<strong>信息的载体</strong>，是对客观事物属性的描述。</p>
-<p>2.数据元素：数据的最小单位，通常由<strong>值域(存储的数据)</strong>和<strong>相关属性(标识符或下标)</strong>组成。</p>
-<p>3.数据对象：有相同性质的数据元素的集合，形成一个整体。</p>
-<p>4.数据类型：一个值的集合及其允许的操作，分为<strong>原子类型、结构类型和抽象数据类型(ADT)</strong>。</p>
-<p>5.数据结构：相互之间存在一种或多种特定关系的数据元素的集合。包括<strong>逻辑结构、存储结构、和数据的运算</strong>。</p>
-<h3 id="1-2-数据结构三要素"><a href="#1-2-数据结构三要素" class="headerlink" title="1.2 数据结构三要素"></a>1.2 数据结构三要素</h3><p>逻辑结构：定义了数据元素之间的逻辑关系，不考虑计算机真实的内存布局。它独立于存储结构，可分为<strong>线性结构和非线性结构</strong>。</p>
-<p><img src="https://img.rath02.top/2026/03/image-20260312212822916" alt="image-20260312212822916"></p>
-<p>四种基本结构关系如下图：</p>
-<p><img src="C:/Users/26954/AppData/Roaming/Typora/typora-user-images/image-20260312212951542.png" alt="image-20260312212951542"></p>
-<p>存储结构：在计算机内存中的具体映射。同样的算法设计用不同的存储实现效率完全不同。如栈可以用顺序存储(数组实现)，也可以使用链式存储(链表实现)。</p>
-<p><strong>常见的存储结构有顺序存储、链式存储、索引存储和散列存储。</strong></p>
-<blockquote>
-<p>顺序存储：逻辑上相邻的数据元素存储在物理上相邻的存储单元中。优点是随机存储，时间复杂度为O(1)，缺点是容易产生外部碎片(要使用连续的存储单元)。</p>
-<p>链式存储：不要求逻辑相邻的数据元素存储在物理上相邻的存储单元。使用指针指示元素的存储地址。优点是不会产生碎片，充分利用存储单元。缺点是每个元素存储指针而额外占用空间，而且只能顺序访问。</p>
-<p>索引存储：在存储数据元素时，额外建立索引表。索引表的每一项称为索引项，包括关键字和地址。优点是检索速度快，缺点是需要额外存储空间用于索引表，在增加和删除元素时需要更新索引表，带来额外时间开销。</p>
-<p>散列存储：根据元素的关键字直接计算出其存储地址，称HashMap。优点是检索、插入和删除操作都很快速，缺点是散列函数如果设计不当，可能产生冲突，解决冲突会增加时间和空间成本。</p>
-</blockquote>
-<p>数据的运算：<strong>包括定义和实现</strong>。定义说明运算的功能，实现完成运算的具体步骤。</p>
-<h3 id="1-3-算法和算法评价"><a href="#1-3-算法和算法评价" class="headerlink" title="1.3 算法和算法评价"></a>1.3 算法和算法评价</h3><p>算法是对特定问题求解步骤的描述，是一个有穷指令序列。一个好的算法应该具有下面五个重要特性。</p>
-<blockquote>
-<p>有穷性：算法在有限步后结束，每一步在有限时间内完成。</p>
-<p>确定性：算法每条指令有明确的含义，对于相同的输入，只能产生相同的输出。</p>
-<p>可行性：算法描述的操作可以通过已实现的基本运算执行有限次数完成。</p>
-<p>输入：算法可以有零个或多个输入。</p>
-<p>输出：算法至少有一个输出。</p>
-</blockquote>
-<p>设计一个好的算法，应该满足以下目标：</p>
-<ol>
-<li>正确性</li>
-<li>可读性</li>
-<li>健壮性</li>
-<li>高效率和低存储量需求</li>
-</ol>
-<p>算法效率的度量：在算法设计中，正确性是基础，效率是衡量算法优劣的关键指标。我们引入数学中渐近复杂度分析——通过<strong>时间复杂度和空间复杂度</strong>来描述算法随<strong>问题规模</strong>增长的资源消耗趋势。</p>
-<p><strong>时间复杂度</strong>：用大O记法，不关注算法所用的时间，只关注其所用的步数。它反映的是当数据量(问题规模)增大时，步数如何变化。通常只要关注大O中增长最快的项，且考虑算法的最坏情况。</p>
-<p><strong>常见的时间复杂度阶次</strong></p>
-<script type="math/tex; mode=display">O(1) < O(\log n) < O(n) < O(n \log n) < O(n^2) < O(n^3) < O(2^n) < O(n!)</script><p>暴力的算法最容易想到，但是时间复杂度较高。应该考虑用大O的思想去优化，写出更高效率的代码。</p>
-<p><strong>空间复杂度</strong>：表示算法在运行过程中所需要的<strong>额外存储空间</strong>，若算法只用常量级的额外空间，空间复杂度为O(1)。</p>
-<h3 id="1-4-时间复杂度题目分析"><a href="#1-4-时间复杂度题目分析" class="headerlink" title="1.4 时间复杂度题目分析"></a>1.4 时间复杂度题目分析</h3><p>法一：建立<strong>基本运算的执行次数x</strong>与<strong>问题规模n</strong>之间的关系式。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt;= n)&#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>循环执行次数等于 <code>i</code> 从 1 以<strong>乘 2</strong>的方式增长，直到 <code>i &gt; n</code>。</p>
-<ul>
-<li>第 1 次：i = 1 → 2</li>
-<li>第 2 次：i = 2 → 4</li>
-<li>第 3 次：i = 4 → 8</li>
-<li>…</li>
-<li>第 k 次：i = 2^(k-1) → 2^k</li>
-</ul>
-<p>循环结束条件：<code>2^k &gt; n</code></p>
-<p><script type="math/tex">k = \lceil \log_2 n \rceil</script>，所以算法时间复杂度为<script type="math/tex">T(n) = O(\log_2 n)</script>。</p>
-<p>法二：用数学归纳法或直接累计循环次数，对于递归关系式可以建立递推关系求解。</p>
-<p>法三：邪修方法，设n=64，模拟程序运行过程，带入大O的式子判断时间复杂度。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n, <span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l &lt;= r)&#123;</span><br><span class="line">        <span class="type">int</span> mid = (l+r)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(arr[mid] == key) <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(arr[mid] &lt; key) l = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> r = mid<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>步骤</th>
-<th>说明</th>
-<th>n=64时模拟</th>
-<th>循环次数/操作次数</th>
-<th>规律分析</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>初始化</td>
-<td><code>l=0, r=63</code></td>
-<td>0</td>
-<td>无循环，初始化</td>
-</tr>
-<tr>
-<td>2</td>
-<td>第1次循环</td>
-<td><code>mid=(0+63)/2=31</code></td>
-<td>1</td>
-<td>查找范围减半</td>
-</tr>
-<tr>
-<td>3</td>
-<td>第2次循环</td>
-<td><code>mid=(32+63)/2=47</code></td>
-<td>2</td>
-<td>再减半</td>
-</tr>
-<tr>
-<td>4</td>
-<td>第3次循环</td>
-<td><code>mid=(32+46)/2=39</code></td>
-<td>3</td>
-<td>减半</td>
-</tr>
-<tr>
-<td>5</td>
-<td>第4次循环</td>
-<td><code>mid=(32+38)/2=35</code></td>
-<td>4</td>
-<td>减半</td>
-</tr>
-<tr>
-<td>6</td>
-<td>第5次循环</td>
-<td><code>mid=(32+34)/2=33</code></td>
-<td>5</td>
-<td>减半</td>
-</tr>
-<tr>
-<td>7</td>
-<td>第6次循环</td>
-<td><code>mid=(34+34)/2=34</code></td>
-<td>6</td>
-<td>减半</td>
-</tr>
-<tr>
-<td>8</td>
-<td>第7次循环</td>
-<td><code>l&gt;r</code>，循环结束</td>
-<td>6</td>
-<td>循环退出</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>6显然和<script type="math/tex">\log_2 64</script>的结果比较近，于是<script type="math/tex">T(n) = O(\log_2 n)</script>。实际在做题的时候，模拟得到<strong>关键语句</strong>执行次数就行。</p>
-<h3 id="1-5-斐波那契数列"><a href="#1-5-斐波那契数列" class="headerlink" title="1.5 斐波那契数列"></a>1.5 斐波那契数列</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">fib</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">fib</span>(n<span class="number">-1</span>) + <span class="built_in">fib</span>(n<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>分析步骤：</p>
-<ol>
-<li>建立递推关系：<br>设 T(n) 为 <code>fib(n)</code> 的基本操作次数：<br>T(n) = T(n-1) + T(n-2) + 1<br>其中 +1 表示本层加法操作。</li>
-<li>展开递归：<br>T(n) = T(n-1) + T(n-2) + 1<br>= (T(n-2) + T(n-3) + 1) + T(n-2) + 1<br>= 2T(n-2) + T(n-3) + 2<br>继续展开，可以看到执行次数呈指数增长。</li>
-<li>时间复杂度：<br>T(n) = O(2^n)</li>
-</ol>
-<p>非递归实现（迭代法）：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">fib_iter</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n &lt;= <span class="number">1</span>) <span class="keyword">return</span> n;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">1</span>, c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++)&#123;</span><br><span class="line">        c = a + b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>分析步骤：</p>
-<ol>
-<li>循环次数：<br>从 2 到 n → 循环次数 = n-1</li>
-<li>每次循环基本操作：<br>加法 c = a + b、赋值 a = b、赋值 b = c → 3 次<br>总操作次数 x ≈ 3(n-1)</li>
-<li>时间复杂度：<br>T(n) = O(n)</li>
-</ol>
-<h2 id="2-线性表"><a href="#2-线性表" class="headerlink" title="2 线性表"></a>2 线性表</h2><h3 id="2-1-线性表的定义和操作"><a href="#2-1-线性表的定义和操作" class="headerlink" title="2.1 线性表的定义和操作"></a>2.1 线性表的定义和操作</h3>]]></content>
-      <categories>
-        <category>考研</category>
-      </categories>
-      <tags>
-        <tag>数据结构</tag>
-        <tag>王道</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo部署与域名解析</title>
     <url>/2026/01/17/hexo%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<h2 id="创建GitHub仓库"><a href="#创建GitHub仓库" class="headerlink" title="创建GitHub仓库"></a>创建GitHub仓库</h2><ul>
@@ -194,86 +42,6 @@
         <tag>域名解析</tag>
         <tag>GitHub</tag>
         <tag>cloudflare</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图床教程</title>
-    <url>/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
-<ul>
-<li><strong>为什么选它？</strong><ol>
-<li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
-<li><strong>速度快</strong>：直接利用 Cloudflare 全球 CDN 加速。</li>
-<li><strong>无需备案</strong>：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国内备案流程。</li>
-<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
-</ol>
-</li>
-</ul>
-<hr>
-<h3 id="配置保姆级教程"><a href="#配置保姆级教程" class="headerlink" title="配置保姆级教程"></a>配置保姆级教程</h3><h4 id="第一步：在-Cloudflare-开启-R2-存储桶"><a href="#第一步：在-Cloudflare-开启-R2-存储桶" class="headerlink" title="第一步：在 Cloudflare 开启 R2 存储桶"></a>第一步：在 Cloudflare 开启 R2 存储桶</h4><ol>
-<li>登录 <a href="https://www.google.com/search?q=https://dash.cloudflare.com/">Cloudflare Dashboard</a>。</li>
-<li>在左侧菜单找到 <strong>R2</strong>（如果没开通，点击启用，需要绑定信用卡或 PayPal 验证，但<strong>不会扣费</strong>，只要你没超过 10GB）。</li>
-<li>点击 <strong>“Create bucket” (创建存储桶)</strong>。<ul>
-<li><strong>Bucket name</strong>: 随便起，比如 <code>blog-imgs</code>。</li>
-<li><strong>Location</strong>: 建议选 <code>Automatic</code> 或 <code>North America</code> (因为你的博客在 GitHub Pages，美西节点连接顺畅)。</li>
-<li>点击 <strong>Create bucket</strong>。</li>
-</ul>
-</li>
-</ol>
-<h4 id="第二步：绑定你的域名-关键"><a href="#第二步：绑定你的域名-关键" class="headerlink" title="第二步：绑定你的域名 (关键)"></a>第二步：绑定你的域名 (关键)</h4><ol>
-<li>进入刚才创建的 bucket 页面。</li>
-<li>点击顶部的 <strong>“Settings” (设置)</strong> 标签。</li>
-<li>向下滚动找到 <strong>“Public Access” (公开访问)</strong> -&gt; <strong>“Custom Domains” (自定义域)</strong>。</li>
-<li>点击 <strong>“Connect Domain”</strong>。</li>
-<li>输入你想用的二级域名，比如 <code>img.你的域名</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
-<li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
-<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名/图片名.png</code> 访问了。</li>
-</ol>
-<span id="more"></span>
-<h4 id="第三步：获取-API-密钥"><a href="#第三步：获取-API-密钥" class="headerlink" title="第三步：获取 API 密钥"></a>第三步：获取 API 密钥</h4><p>为了让 PicGo 能上传图片，你需要“钥匙”。</p>
-<ol>
-<li>回到 R2 的主界面（列出所有 bucket 的那个页面）。</li>
-<li>在右侧找到 <strong>“Manage R2 API Tokens”</strong>。</li>
-<li>点击 <strong>“Create API Token”</strong>。</li>
-<li><strong>Permissions</strong>: 选择 <strong>Admin Read &amp; Write</strong> (读写权限)。</li>
-<li><strong>TTL</strong>: 选 <code>Forever</code> (永久)。</li>
-<li>点击 <strong>Create API Token</strong>。</li>
-<li><strong>重要：</strong> 屏幕上会显示 <code>Access Key ID</code> 和 <code>Secret Access Key</code>，<strong>立刻复制保存下来</strong>，这个页面关了就再也看不到了。</li>
-</ol>
-<h4 id="第四步：配置-PicGo"><a href="#第四步：配置-PicGo" class="headerlink" title="第四步：配置 PicGo"></a>第四步：配置 PicGo</h4><p>PicGo 原生不支持 R2，需要安装一个插件（因为 R2 兼容 AWS S3 协议）。</p>
-<ol>
-<li>打开 <strong>PicGo</strong> -&gt; <strong>插件设置</strong>。</li>
-<li>搜索安装 <code>picgo-plugin-s3</code> (注意是 s3，不是 aws-s3，推荐用 <code>s3</code> 插件更轻量，或者 <code>picgo-plugin-aws-s3</code> 也可以)。<ul>
-<li><em>如果安装失败，可能需要先安装 Node.js，或者多试几次。</em></li>
-</ul>
-</li>
-<li>安装好后，点击 <strong>图床设置</strong> -&gt; <strong>Amazon S3</strong> (插件装好后会出现这个选项)。</li>
-<li><strong>填入配置：</strong><ul>
-<li><strong>图床配置名</strong>: <code>R2</code> (随便填)</li>
-<li><strong>应用密钥 ID (AccessKeyID)</strong>: 刚才复制的 Access Key ID。</li>
-<li><strong>应用密钥 (SecretAccessKey)</strong>: 刚才复制的 Secret Access Key。</li>
-<li><strong>桶名 (Bucket)</strong>: 你创建的 bucket 名字 (比如 <code>blog-imgs</code>)。</li>
-<li><strong>文件路径</strong>: <code>{year}/{month}/{fileName}</code> (可选，按年月分类)。</li>
-<li><strong>地区 (Region)</strong>: <code>auto</code> (如果你一定要填，填 <code>us-east-1</code>，但在 Cloudflare R2 中通常填 <code>auto</code> 或留空)。</li>
-<li><strong>自定义节点 (Endpoint)</strong>: <strong>这是关键！</strong><ul>
-<li>回到 Cloudflare R2 界面，在 bucket 详情页，你会看到一个 <strong>“S3 API”</strong> 的链接，通常长这样：<code>https://&lt;你的账号ID&gt;.r2.cloudflarestorage.com</code>。</li>
-<li><strong>把这个链接填进去。</strong> (注意：<strong>不要</strong>在后面加 bucket 名字)。</li>
-</ul>
-</li>
-<li><strong>自定义域名</strong>: <code>https://img.你的域名/{path}</code> (刚才绑定的那个二级域名)。</li>
-<li><strong>强制路径样式 (ForcePathStyle)</strong>: 选 <code>否</code> (或者如果不成功改选 <code>是</code> 试试)。</li>
-</ul>
-</li>
-<li>点击 <strong>确定</strong> 并 <strong>设为默认图床</strong>。</li>
-</ol>
-<p><img src="https://img.rath02.top/2026/01/image-20260116213545933" alt="image-20260116213545933"></p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -792,6 +560,238 @@ r = \sqrt{x^2 + y^2}</script>]]></content>
       <tags>
         <tag>零基础</tag>
         <tag>高数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图床教程</title>
+    <url>/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
+<ul>
+<li><strong>为什么选它？</strong><ol>
+<li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
+<li><strong>速度快</strong>：直接利用 Cloudflare 全球 CDN 加速。</li>
+<li><strong>无需备案</strong>：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国内备案流程。</li>
+<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="配置保姆级教程"><a href="#配置保姆级教程" class="headerlink" title="配置保姆级教程"></a>配置保姆级教程</h3><h4 id="第一步：在-Cloudflare-开启-R2-存储桶"><a href="#第一步：在-Cloudflare-开启-R2-存储桶" class="headerlink" title="第一步：在 Cloudflare 开启 R2 存储桶"></a>第一步：在 Cloudflare 开启 R2 存储桶</h4><ol>
+<li>登录 <a href="https://www.google.com/search?q=https://dash.cloudflare.com/">Cloudflare Dashboard</a>。</li>
+<li>在左侧菜单找到 <strong>R2</strong>（如果没开通，点击启用，需要绑定信用卡或 PayPal 验证，但<strong>不会扣费</strong>，只要你没超过 10GB）。</li>
+<li>点击 <strong>“Create bucket” (创建存储桶)</strong>。<ul>
+<li><strong>Bucket name</strong>: 随便起，比如 <code>blog-imgs</code>。</li>
+<li><strong>Location</strong>: 建议选 <code>Automatic</code> 或 <code>North America</code> (因为你的博客在 GitHub Pages，美西节点连接顺畅)。</li>
+<li>点击 <strong>Create bucket</strong>。</li>
+</ul>
+</li>
+</ol>
+<h4 id="第二步：绑定你的域名-关键"><a href="#第二步：绑定你的域名-关键" class="headerlink" title="第二步：绑定你的域名 (关键)"></a>第二步：绑定你的域名 (关键)</h4><ol>
+<li>进入刚才创建的 bucket 页面。</li>
+<li>点击顶部的 <strong>“Settings” (设置)</strong> 标签。</li>
+<li>向下滚动找到 <strong>“Public Access” (公开访问)</strong> -&gt; <strong>“Custom Domains” (自定义域)</strong>。</li>
+<li>点击 <strong>“Connect Domain”</strong>。</li>
+<li>输入你想用的二级域名，比如 <code>img.你的域名</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
+<li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
+<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名/图片名.png</code> 访问了。</li>
+</ol>
+<span id="more"></span>
+<h4 id="第三步：获取-API-密钥"><a href="#第三步：获取-API-密钥" class="headerlink" title="第三步：获取 API 密钥"></a>第三步：获取 API 密钥</h4><p>为了让 PicGo 能上传图片，你需要“钥匙”。</p>
+<ol>
+<li>回到 R2 的主界面（列出所有 bucket 的那个页面）。</li>
+<li>在右侧找到 <strong>“Manage R2 API Tokens”</strong>。</li>
+<li>点击 <strong>“Create API Token”</strong>。</li>
+<li><strong>Permissions</strong>: 选择 <strong>Admin Read &amp; Write</strong> (读写权限)。</li>
+<li><strong>TTL</strong>: 选 <code>Forever</code> (永久)。</li>
+<li>点击 <strong>Create API Token</strong>。</li>
+<li><strong>重要：</strong> 屏幕上会显示 <code>Access Key ID</code> 和 <code>Secret Access Key</code>，<strong>立刻复制保存下来</strong>，这个页面关了就再也看不到了。</li>
+</ol>
+<h4 id="第四步：配置-PicGo"><a href="#第四步：配置-PicGo" class="headerlink" title="第四步：配置 PicGo"></a>第四步：配置 PicGo</h4><p>PicGo 原生不支持 R2，需要安装一个插件（因为 R2 兼容 AWS S3 协议）。</p>
+<ol>
+<li>打开 <strong>PicGo</strong> -&gt; <strong>插件设置</strong>。</li>
+<li>搜索安装 <code>picgo-plugin-s3</code> (注意是 s3，不是 aws-s3，推荐用 <code>s3</code> 插件更轻量，或者 <code>picgo-plugin-aws-s3</code> 也可以)。<ul>
+<li><em>如果安装失败，可能需要先安装 Node.js，或者多试几次。</em></li>
+</ul>
+</li>
+<li>安装好后，点击 <strong>图床设置</strong> -&gt; <strong>Amazon S3</strong> (插件装好后会出现这个选项)。</li>
+<li><strong>填入配置：</strong><ul>
+<li><strong>图床配置名</strong>: <code>R2</code> (随便填)</li>
+<li><strong>应用密钥 ID (AccessKeyID)</strong>: 刚才复制的 Access Key ID。</li>
+<li><strong>应用密钥 (SecretAccessKey)</strong>: 刚才复制的 Secret Access Key。</li>
+<li><strong>桶名 (Bucket)</strong>: 你创建的 bucket 名字 (比如 <code>blog-imgs</code>)。</li>
+<li><strong>文件路径</strong>: <code>{year}/{month}/{fileName}</code> (可选，按年月分类)。</li>
+<li><strong>地区 (Region)</strong>: <code>auto</code> (如果你一定要填，填 <code>us-east-1</code>，但在 Cloudflare R2 中通常填 <code>auto</code> 或留空)。</li>
+<li><strong>自定义节点 (Endpoint)</strong>: <strong>这是关键！</strong><ul>
+<li>回到 Cloudflare R2 界面，在 bucket 详情页，你会看到一个 <strong>“S3 API”</strong> 的链接，通常长这样：<code>https://&lt;你的账号ID&gt;.r2.cloudflarestorage.com</code>。</li>
+<li><strong>把这个链接填进去。</strong> (注意：<strong>不要</strong>在后面加 bucket 名字)。</li>
+</ul>
+</li>
+<li><strong>自定义域名</strong>: <code>https://img.你的域名/{path}</code> (刚才绑定的那个二级域名)。</li>
+<li><strong>强制路径样式 (ForcePathStyle)</strong>: 选 <code>否</code> (或者如果不成功改选 <code>是</code> 试试)。</li>
+</ul>
+</li>
+<li>点击 <strong>确定</strong> 并 <strong>设为默认图床</strong>。</li>
+</ol>
+<p><img src="https://img.rath02.top/2026/01/image-20260116213545933" alt="image-20260116213545933"></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Data Structure</title>
+    <url>/2026/03/10/Data-Structure/</url>
+    <content><![CDATA[<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="1-绪论"><a href="#1-绪论" class="headerlink" title="1 绪论"></a>1 绪论</h2><h3 id="1-1-数据结构的基本概念"><a href="#1-1-数据结构的基本概念" class="headerlink" title="1.1 数据结构的基本概念"></a>1.1 数据结构的基本概念</h3><p>1.数据：数据就是<strong>信息的载体</strong>，是对客观事物属性的描述。</p>
+<p>2.数据元素：数据的最小单位，通常由<strong>值域(存储的数据)</strong>和<strong>相关属性(标识符或下标)</strong>组成。</p>
+<p>3.数据对象：有相同性质的数据元素的集合，形成一个整体。</p>
+<p>4.数据类型：一个值的集合及其允许的操作，分为<strong>原子类型、结构类型和抽象数据类型(ADT)</strong>。</p>
+<p>5.数据结构：相互之间存在一种或多种特定关系的数据元素的集合。包括<strong>逻辑结构、存储结构、和数据的运算</strong>。</p>
+<h3 id="1-2-数据结构三要素"><a href="#1-2-数据结构三要素" class="headerlink" title="1.2 数据结构三要素"></a>1.2 数据结构三要素</h3><p>逻辑结构：定义了数据元素之间的逻辑关系，不考虑计算机真实的内存布局。它独立于存储结构，可分为<strong>线性结构和非线性结构</strong>。</p>
+<p><img src="https://img.rath02.top/2026/03/image-20260312212822916" alt="image-20260312212822916"></p>
+<p>四种基本结构关系如下图：</p>
+<p><img src="https://img.rath02.top/2026/03/image-20260312212951542" alt="img"></p>
+<p>存储结构：在计算机内存中的具体映射。同样的算法设计用不同的存储实现效率完全不同。如栈可以用顺序存储(数组实现)，也可以使用链式存储(链表实现)。</p>
+<p><strong>常见的存储结构有顺序存储、链式存储、索引存储和散列存储。</strong></p>
+<blockquote>
+<p>顺序存储：逻辑上相邻的数据元素存储在物理上相邻的存储单元中。优点是随机存储，时间复杂度为O(1)，缺点是容易产生外部碎片(要使用连续的存储单元)。</p>
+<p>链式存储：不要求逻辑相邻的数据元素存储在物理上相邻的存储单元。使用指针指示元素的存储地址。优点是不会产生碎片，充分利用存储单元。缺点是每个元素存储指针而额外占用空间，而且只能顺序访问。</p>
+<p>索引存储：在存储数据元素时，额外建立索引表。索引表的每一项称为索引项，包括关键字和地址。优点是检索速度快，缺点是需要额外存储空间用于索引表，在增加和删除元素时需要更新索引表，带来额外时间开销。</p>
+<p>散列存储：根据元素的关键字直接计算出其存储地址，称HashMap。优点是检索、插入和删除操作都很快速，缺点是散列函数如果设计不当，可能产生冲突，解决冲突会增加时间和空间成本。</p>
+</blockquote>
+<p>数据的运算：<strong>包括定义和实现</strong>。定义说明运算的功能，实现完成运算的具体步骤。</p>
+<h3 id="1-3-算法和算法评价"><a href="#1-3-算法和算法评价" class="headerlink" title="1.3 算法和算法评价"></a>1.3 算法和算法评价</h3><p>算法是对特定问题求解步骤的描述，是一个有穷指令序列。一个好的算法应该具有下面五个重要特性。</p>
+<blockquote>
+<p>有穷性：算法在有限步后结束，每一步在有限时间内完成。</p>
+<p>确定性：算法每条指令有明确的含义，对于相同的输入，只能产生相同的输出。</p>
+<p>可行性：算法描述的操作可以通过已实现的基本运算执行有限次数完成。</p>
+<p>输入：算法可以有零个或多个输入。</p>
+<p>输出：算法至少有一个输出。</p>
+</blockquote>
+<p>设计一个好的算法，应该满足以下目标：</p>
+<ol>
+<li>正确性</li>
+<li>可读性</li>
+<li>健壮性</li>
+<li>高效率和低存储量需求</li>
+</ol>
+<p>算法效率的度量：在算法设计中，正确性是基础，效率是衡量算法优劣的关键指标。我们引入数学中渐近复杂度分析——通过<strong>时间复杂度和空间复杂度</strong>来描述算法随<strong>问题规模</strong>增长的资源消耗趋势。</p>
+<p><strong>时间复杂度</strong>：用大O记法，不关注算法所用的时间，只关注其所用的步数。它反映的是当数据量(问题规模)增大时，步数如何变化。通常只要关注大O中增长最快的项，且考虑算法的最坏情况。</p>
+<p><strong>常见的时间复杂度阶次</strong></p>
+<script type="math/tex; mode=display">O(1) < O(\log n) < O(n) < O(n \log n) < O(n^2) < O(n^3) < O(2^n) < O(n!)</script><p>暴力的算法最容易想到，但是时间复杂度较高。应该考虑用大O的思想去优化，写出更高效率的代码。</p>
+<p><strong>空间复杂度</strong>：表示算法在运行过程中所需要的<strong>额外存储空间</strong>，若算法只用常量级的额外空间，空间复杂度为O(1)。</p>
+<h3 id="1-4-时间复杂度题目分析"><a href="#1-4-时间复杂度题目分析" class="headerlink" title="1.4 时间复杂度题目分析"></a>1.4 时间复杂度题目分析</h3><p>法一：建立<strong>基本运算的执行次数x</strong>与<strong>问题规模n</strong>之间的关系式。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(i &lt;= n)&#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>循环执行次数等于 <code>i</code> 从 1 以<strong>乘 2</strong>的方式增长，直到 <code>i &gt; n</code>。</p>
+<ul>
+<li>第 1 次：i = 1 → 2</li>
+<li>第 2 次：i = 2 → 4</li>
+<li>第 3 次：i = 4 → 8</li>
+<li>…</li>
+<li>第 k 次：i = 2^(k-1) → 2^k</li>
+</ul>
+<p>循环结束条件：<code>2^k &gt; n</code></p>
+<p><script type="math/tex">k = \lceil \log_2 n \rceil</script>，所以算法时间复杂度为<script type="math/tex">T(n) = O(\log_2 n)</script>。</p>
+<p>法二：用数学归纳法或直接累计循环次数，对于递归关系式可以建立递推关系求解。</p>
+<p>法三：邪修方法，设n=64，模拟程序运行过程，带入大O的式子判断时间复杂度。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span> arr[], <span class="type">int</span> n, <span class="type">int</span> key)</span>&#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(l &lt;= r)&#123;</span><br><span class="line">        <span class="type">int</span> mid = (l+r)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(arr[mid] == key) <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(arr[mid] &lt; key) l = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> r = mid<span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>说明</th>
+<th>n=64时模拟</th>
+<th>循环次数/操作次数</th>
+<th>规律分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>初始化</td>
+<td><code>l=0, r=63</code></td>
+<td>0</td>
+<td>无循环，初始化</td>
+</tr>
+<tr>
+<td>2</td>
+<td>第1次循环</td>
+<td><code>mid=(0+63)/2=31</code></td>
+<td>1</td>
+<td>查找范围减半</td>
+</tr>
+<tr>
+<td>3</td>
+<td>第2次循环</td>
+<td><code>mid=(32+63)/2=47</code></td>
+<td>2</td>
+<td>再减半</td>
+</tr>
+<tr>
+<td>4</td>
+<td>第3次循环</td>
+<td><code>mid=(32+46)/2=39</code></td>
+<td>3</td>
+<td>减半</td>
+</tr>
+<tr>
+<td>5</td>
+<td>第4次循环</td>
+<td><code>mid=(32+38)/2=35</code></td>
+<td>4</td>
+<td>减半</td>
+</tr>
+<tr>
+<td>6</td>
+<td>第5次循环</td>
+<td><code>mid=(32+34)/2=33</code></td>
+<td>5</td>
+<td>减半</td>
+</tr>
+<tr>
+<td>7</td>
+<td>第6次循环</td>
+<td><code>mid=(34+34)/2=34</code></td>
+<td>6</td>
+<td>减半</td>
+</tr>
+<tr>
+<td>8</td>
+<td>第7次循环</td>
+<td><code>l&gt;r</code>，循环结束</td>
+<td>6</td>
+<td>循环退出</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>6显然和<script type="math/tex">\log_2 64</script>的结果比较近，于是<script type="math/tex">T(n) = O(\log_2 n)</script>。实际在做题的时候，模拟得到<strong>关键语句</strong>执行次数就行。</p>
+<h3 id="1-5-斐波那契数列"><a href="#1-5-斐波那契数列" class="headerlink" title="1.5 斐波那契数列"></a>1.5 斐波那契数列</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">fib</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> n;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">fib</span>(n<span class="number">-1</span>) + <span class="built_in">fib</span>(n<span class="number">-2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分析步骤：</p>
+<ol>
+<li>建立递推关系：<br>设 T(n) 为 <code>fib(n)</code> 的基本操作次数：<br>T(n) = T(n-1) + T(n-2) + 1<br>其中 +1 表示本层加法操作。</li>
+<li>展开递归：<br>T(n) = T(n-1) + T(n-2) + 1<br>= (T(n-2) + T(n-3) + 1) + T(n-2) + 1<br>= 2T(n-2) + T(n-3) + 2<br>继续展开，可以看到执行次数呈指数增长。</li>
+<li>时间复杂度：<br>T(n) = O(2^n)</li>
+</ol>
+<p>非递归实现（迭代法）：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">fib_iter</span><span class="params">(<span class="type">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n &lt;= <span class="number">1</span>) <span class="keyword">return</span> n;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">1</span>, c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++)&#123;</span><br><span class="line">        c = a + b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分析步骤：</p>
+<ol>
+<li>循环次数：<br>从 2 到 n → 循环次数 = n-1</li>
+<li>每次循环基本操作：<br>加法 c = a + b、赋值 a = b、赋值 b = c → 3 次<br>总操作次数 x ≈ 3(n-1)</li>
+<li>时间复杂度：<br>T(n) = O(n)</li>
+</ol>
+<h2 id="2-线性表"><a href="#2-线性表" class="headerlink" title="2 线性表"></a>2 线性表</h2><h3 id="2-1-线性表的定义和操作"><a href="#2-1-线性表的定义和操作" class="headerlink" title="2.1 线性表的定义和操作"></a>2.1 线性表的定义和操作</h3>]]></content>
+      <categories>
+        <category>考研</category>
+      </categories>
+      <tags>
+        <tag>数据结构</tag>
+        <tag>王道</tag>
       </tags>
   </entry>
 </search>
