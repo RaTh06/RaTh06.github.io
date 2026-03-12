@@ -197,214 +197,83 @@
       </tags>
   </entry>
   <entry>
-    <title>高数基础</title>
-    <url>/2026/01/20/%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1 id="第一部分：基本逻辑"><a href="#第一部分：基本逻辑" class="headerlink" title="第一部分：基本逻辑"></a>第一部分：基本逻辑</h1><h2 id="1-命题逻辑关系"><a href="#1-命题逻辑关系" class="headerlink" title="1. 命题逻辑关系"></a>1. 命题逻辑关系</h2><p>设命题 $A,B$：</p>
+    <title>图床教程</title>
+    <url>/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
 <ul>
-<li><strong>充分条件</strong>：<script type="math/tex; mode=display">
-A \Rightarrow B</script>有 $A$ 一定有 $B$。</li>
-<li><strong>必要条件</strong>：<script type="math/tex; mode=display">
-B \Rightarrow A</script>没有 $B$ 就一定没有 $A$。</li>
-<li><strong>充要条件</strong>：<script type="math/tex; mode=display">
-A \Leftrightarrow B</script>$A$ 与 $B$ 等价。</li>
-<li><strong>无关条件</strong>：<br>$A$ 与 $B$ 互不推出。</li>
-</ul>
-<p>注意：<br>“$A$ 是 $B$ 的充分不必要条件”与“$A$ 是 $B$ 的必要不充分条件”<strong>方向不同，不能混淆</strong>。</p>
-<hr>
-<h2 id="2-逆否命题"><a href="#2-逆否命题" class="headerlink" title="2. 逆否命题"></a>2. 逆否命题</h2><p>命题</p>
-<script type="math/tex; mode=display">
-\text{若 } A \text{，则 } B</script><p>等价于其逆否命题</p>
-<script type="math/tex; mode=display">
-\text{若非 } B \text{，则非 } A</script><p>在证明“若 $A$ 则 $B$”较困难时，<strong>优先考虑证明逆否命题</strong>。</p>
-<hr>
-<h2 id="3-德·摩根律（对偶律）"><a href="#3-德·摩根律（对偶律）" class="headerlink" title="3. 德·摩根律（对偶律）"></a>3. 德·摩根律（对偶律）</h2><p>集合或逻辑中的对立转化：</p>
-<script type="math/tex; mode=display">
-\overline{A \cup B} = \overline{A} \cap \overline{B}</script><script type="math/tex; mode=display">
-\overline{A \cap B} = \overline{A} \cup \overline{B}</script><p>口诀：<br><strong>长杠变短杠，开口换方向</strong>。</p>
-<hr>
-<h2 id="4-数学归纳法"><a href="#4-数学归纳法" class="headerlink" title="4. 数学归纳法"></a>4. 数学归纳法</h2><p>适用于与自然数 $n$ 有关的命题。</p>
-<p>步骤：</p>
-<ol>
-<li><strong>验</strong>：验证 $n = n_0$ 时命题成立</li>
-<li><strong>设</strong>：假设 $n = k$ 时命题成立</li>
-<li><strong>证</strong>：在假设成立的基础上，证明 $n = k + 1$ 也成立</li>
+<li><strong>为什么选它？</strong><ol>
+<li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
+<li><strong>速度快</strong>：直接利用 Cloudflare 全球 CDN 加速。</li>
+<li><strong>无需备案</strong>：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国内备案流程。</li>
+<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
 </ol>
-<p>注意：<br>“设 $n=k$ 成立”<strong>只是推理前提，不能当结论使用</strong>。</p>
-<hr>
-<h1 id="第二部分：解析式的概念与运算"><a href="#第二部分：解析式的概念与运算" class="headerlink" title="第二部分：解析式的概念与运算"></a>第二部分：解析式的概念与运算</h1><h2 id="1-解析式分类"><a href="#1-解析式分类" class="headerlink" title="1. 解析式分类"></a>1. 解析式分类</h2><ul>
-<li><strong>代数式</strong>：整式、分式、无理式</li>
-<li><strong>超越式</strong>：指数式、对数式、三角函数式、反三角函数式</li>
+</li>
 </ul>
-<p>一般指可由有限次代数运算和初等函数运算表示的式子。</p>
 <hr>
-<h2 id="2-整式"><a href="#2-整式" class="headerlink" title="2. 整式"></a>2. 整式</h2><ul>
-<li><strong>单项式</strong>：系数与字母幂的乘积</li>
-<li><strong>多项式</strong>：若干单项式的代数和</li>
+<h3 id="配置保姆级教程"><a href="#配置保姆级教程" class="headerlink" title="配置保姆级教程"></a>配置保姆级教程</h3><h4 id="第一步：在-Cloudflare-开启-R2-存储桶"><a href="#第一步：在-Cloudflare-开启-R2-存储桶" class="headerlink" title="第一步：在 Cloudflare 开启 R2 存储桶"></a>第一步：在 Cloudflare 开启 R2 存储桶</h4><ol>
+<li>登录 <a href="https://www.google.com/search?q=https://dash.cloudflare.com/">Cloudflare Dashboard</a>。</li>
+<li>在左侧菜单找到 <strong>R2</strong>（如果没开通，点击启用，需要绑定信用卡或 PayPal 验证，但<strong>不会扣费</strong>，只要你没超过 10GB）。</li>
+<li>点击 <strong>“Create bucket” (创建存储桶)</strong>。<ul>
+<li><strong>Bucket name</strong>: 随便起，比如 <code>blog-imgs</code>。</li>
+<li><strong>Location</strong>: 建议选 <code>Automatic</code> 或 <code>North America</code> (因为你的博客在 GitHub Pages，美西节点连接顺畅)。</li>
+<li>点击 <strong>Create bucket</strong>。</li>
 </ul>
-<p>次数判定：</p>
-<ul>
-<li>单项式次数：各字母指数之和</li>
-<li>多项式次数：各项中次数的最大值</li>
-</ul>
-<p>多项式乘法推荐使用 <strong>系数竖式法</strong>，可有效减少漏项。</p>
-<hr>
-<h2 id="3-分式与多项式长除法"><a href="#3-分式与多项式长除法" class="headerlink" title="3. 分式与多项式长除法"></a>3. 分式与多项式长除法</h2><p>化简步骤：</p>
-<ol>
-<li>分解因式，约去公因式</li>
-<li>若分子次数 $\ge$ 分母次数，可使用 <strong>多项式长除法</strong></li>
+</li>
 </ol>
-<p>多项式长除法常用于：</p>
-<ul>
-<li>分式化简</li>
-<li>因式分解</li>
-<li>研究函数渐近行为</li>
+<h4 id="第二步：绑定你的域名-关键"><a href="#第二步：绑定你的域名-关键" class="headerlink" title="第二步：绑定你的域名 (关键)"></a>第二步：绑定你的域名 (关键)</h4><ol>
+<li>进入刚才创建的 bucket 页面。</li>
+<li>点击顶部的 <strong>“Settings” (设置)</strong> 标签。</li>
+<li>向下滚动找到 <strong>“Public Access” (公开访问)</strong> -&gt; <strong>“Custom Domains” (自定义域)</strong>。</li>
+<li>点击 <strong>“Connect Domain”</strong>。</li>
+<li>输入你想用的二级域名，比如 <code>img.你的域名</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
+<li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
+<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名/图片名.png</code> 访问了。</li>
+</ol>
+<span id="more"></span>
+<h4 id="第三步：获取-API-密钥"><a href="#第三步：获取-API-密钥" class="headerlink" title="第三步：获取 API 密钥"></a>第三步：获取 API 密钥</h4><p>为了让 PicGo 能上传图片，你需要“钥匙”。</p>
+<ol>
+<li>回到 R2 的主界面（列出所有 bucket 的那个页面）。</li>
+<li>在右侧找到 <strong>“Manage R2 API Tokens”</strong>。</li>
+<li>点击 <strong>“Create API Token”</strong>。</li>
+<li><strong>Permissions</strong>: 选择 <strong>Admin Read &amp; Write</strong> (读写权限)。</li>
+<li><strong>TTL</strong>: 选 <code>Forever</code> (永久)。</li>
+<li>点击 <strong>Create API Token</strong>。</li>
+<li><strong>重要：</strong> 屏幕上会显示 <code>Access Key ID</code> 和 <code>Secret Access Key</code>，<strong>立刻复制保存下来</strong>，这个页面关了就再也看不到了。</li>
+</ol>
+<h4 id="第四步：配置-PicGo"><a href="#第四步：配置-PicGo" class="headerlink" title="第四步：配置 PicGo"></a>第四步：配置 PicGo</h4><p>PicGo 原生不支持 R2，需要安装一个插件（因为 R2 兼容 AWS S3 协议）。</p>
+<ol>
+<li>打开 <strong>PicGo</strong> -&gt; <strong>插件设置</strong>。</li>
+<li>搜索安装 <code>picgo-plugin-s3</code> (注意是 s3，不是 aws-s3，推荐用 <code>s3</code> 插件更轻量，或者 <code>picgo-plugin-aws-s3</code> 也可以)。<ul>
+<li><em>如果安装失败，可能需要先安装 Node.js，或者多试几次。</em></li>
 </ul>
-<hr>
-<h2 id="4-无理式与根式"><a href="#4-无理式与根式" class="headerlink" title="4. 无理式与根式"></a>4. 无理式与根式</h2><p>$n$ 次算术根定义：</p>
-<ul>
-<li>当 $n$ 为偶数时，$\sqrt[n]{a}$ 表示 <strong>唯一的非负实数</strong></li>
+</li>
+<li>安装好后，点击 <strong>图床设置</strong> -&gt; <strong>Amazon S3</strong> (插件装好后会出现这个选项)。</li>
+<li><strong>填入配置：</strong><ul>
+<li><strong>图床配置名</strong>: <code>R2</code> (随便填)</li>
+<li><strong>应用密钥 ID (AccessKeyID)</strong>: 刚才复制的 Access Key ID。</li>
+<li><strong>应用密钥 (SecretAccessKey)</strong>: 刚才复制的 Secret Access Key。</li>
+<li><strong>桶名 (Bucket)</strong>: 你创建的 bucket 名字 (比如 <code>blog-imgs</code>)。</li>
+<li><strong>文件路径</strong>: <code>{year}/{month}/{fileName}</code> (可选，按年月分类)。</li>
+<li><strong>地区 (Region)</strong>: <code>auto</code> (如果你一定要填，填 <code>us-east-1</code>，但在 Cloudflare R2 中通常填 <code>auto</code> 或留空)。</li>
+<li><strong>自定义节点 (Endpoint)</strong>: <strong>这是关键！</strong><ul>
+<li>回到 Cloudflare R2 界面，在 bucket 详情页，你会看到一个 <strong>“S3 API”</strong> 的链接，通常长这样：<code>https://&lt;你的账号ID&gt;.r2.cloudflarestorage.com</code>。</li>
+<li><strong>把这个链接填进去。</strong> (注意：<strong>不要</strong>在后面加 bucket 名字)。</li>
 </ul>
-<p>重要性质：</p>
-<script type="math/tex; mode=display">
-\sqrt{a^2} = |a|</script><p>（非常容易漏掉绝对值）</p>
-<p>常见技巧：</p>
-<ul>
-<li>分母有理化</li>
-<li>分子有理化</li>
-<li>共轭根式的使用</li>
+</li>
+<li><strong>自定义域名</strong>: <code>https://img.你的域名/{path}</code> (刚才绑定的那个二级域名)。</li>
+<li><strong>强制路径样式 (ForcePathStyle)</strong>: 选 <code>否</code> (或者如果不成功改选 <code>是</code> 试试)。</li>
 </ul>
-<hr>
-<h1 id="第三部分：方程与不等式"><a href="#第三部分：方程与不等式" class="headerlink" title="第三部分：方程与不等式"></a>第三部分：方程与不等式</h1><h2 id="1-一元二次方程"><a href="#1-一元二次方程" class="headerlink" title="1. 一元二次方程"></a>1. 一元二次方程</h2><p>标准形式：</p>
-<script type="math/tex; mode=display">
-ax^2 + bx + c = 0 \quad (a \ne 0)</script><p>求根公式：</p>
-<script type="math/tex; mode=display">
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</script><p>判别式：</p>
-<script type="math/tex; mode=display">
-\Delta = b^2 - 4ac</script><ul>
-<li>$\Delta &gt; 0$：两个不等实根</li>
-<li>$\Delta = 0$：重根</li>
-<li>$\Delta &lt; 0$：一对共轭复根（含 $i$）</li>
-</ul>
-<hr>
-<h2 id="2-韦达定理"><a href="#2-韦达定理" class="headerlink" title="2. 韦达定理"></a>2. 韦达定理</h2><p>对于方程 $ax^2 + bx + c = 0$，设两根为 $x_1, x_2$：</p>
-<script type="math/tex; mode=display">
-x_1 + x_2 = -\frac{b}{a}</script><script type="math/tex; mode=display">
-x_1 x_2 = \frac{c}{a}</script><p>可推广至 $n$ 次方程，但考试中以二次最常见。</p>
-<hr>
-<h2 id="3-常用不等式"><a href="#3-常用不等式" class="headerlink" title="3. 常用不等式"></a>3. 常用不等式</h2><h3 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h3><script type="math/tex; mode=display">
-\text{调和平均} \le \text{几何平均} \le \text{算术平均} \le \text{均方根}</script><p>使用前需满足 <strong>非负条件</strong>。</p>
-<hr>
-<h3 id="三角不等式"><a href="#三角不等式" class="headerlink" title="三角不等式"></a>三角不等式</h3><script type="math/tex; mode=display">
-|a + b| \le |a| + |b|</script><p>等号成立条件：$ab \ge 0$。</p>
-<hr>
-<h3 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h3><script type="math/tex; mode=display">
-(a_1^2 + a_2^2 + \cdots + a_n^2)(b_1^2 + b_2^2 + \cdots + b_n^2)
-\ge
-(a_1 b_1 + a_2 b_2 + \cdots + a_n b_n)^2</script><p>常用于代数放缩与最值问题。</p>
-<hr>
-<h2 id="4-二次函数研究"><a href="#4-二次函数研究" class="headerlink" title="4. 二次函数研究"></a>4. 二次函数研究</h2><p>通过函数图像分析：</p>
-<ul>
-<li>根是否在某区间内</li>
-<li>根在某常数左右的条件</li>
-</ul>
-<p>常见问题类型：</p>
-<ul>
-<li>区间内恒成立</li>
-<li>区间最值</li>
-<li>参数取值范围讨论</li>
-</ul>
-<hr>
-<h1 id="第四部分：函数"><a href="#第四部分：函数" class="headerlink" title="第四部分：函数"></a>第四部分：函数</h1><h2 id="1-基本初等函数"><a href="#1-基本初等函数" class="headerlink" title="1. 基本初等函数"></a>1. 基本初等函数</h2><p>幂函数、指数函数、对数函数需掌握：</p>
-<ul>
-<li>定义域</li>
-<li>单调性</li>
-<li>图像特征</li>
-</ul>
-<p>对数运算法则：</p>
-<script type="math/tex; mode=display">
-\log(ab) = \log a + \log b</script><script type="math/tex; mode=display">
-\log\left(\frac{a}{b}\right) = \log a - \log b</script><script type="math/tex; mode=display">
-\log(a^k) = k \log a</script><hr>
-<h2 id="2-三角与反三角函数"><a href="#2-三角与反三角函数" class="headerlink" title="2. 三角与反三角函数"></a>2. 三角与反三角函数</h2><p>基本三角函数：</p>
-<script type="math/tex; mode=display">
-\sin x,\quad \cos x,\quad \tan x</script><p>反三角函数需特别注意：</p>
-<ul>
-<li>定义域</li>
-<li>主值区间</li>
-</ul>
-<p>诱导公式口诀：<br><strong>奇变偶不变，符号看象限</strong>。</p>
-<hr>
-<h2 id="3-图像变换"><a href="#3-图像变换" class="headerlink" title="3. 图像变换"></a>3. 图像变换</h2><p>平移规律：</p>
-<ul>
-<li>左加右减</li>
-<li>上加下减</li>
-</ul>
-<p>伸缩变换：</p>
-<ul>
-<li>水平伸缩：影响 $x$</li>
-<li>垂直伸缩：影响 $y$</li>
-</ul>
-<hr>
-<h2 id="4-函数特性"><a href="#4-函数特性" class="headerlink" title="4. 函数特性"></a>4. 函数特性</h2><ul>
-<li><strong>奇函数</strong>：关于原点对称</li>
-<li><strong>偶函数</strong>：关于 $y$ 轴对称</li>
-</ul>
-<p>对称性常用于简化最值和图像分析。</p>
-<hr>
-<h1 id="第五部分：数列及其单调性"><a href="#第五部分：数列及其单调性" class="headerlink" title="第五部分：数列及其单调性"></a>第五部分：数列及其单调性</h1><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><p>数列是定义在正整数集上的函数：</p>
-<script type="math/tex; mode=display">
-a_1, a_2, \ldots, a_n, \ldots</script><hr>
-<h2 id="2-等差与等比数列"><a href="#2-等差与等比数列" class="headerlink" title="2. 等差与等比数列"></a>2. 等差与等比数列</h2><h3 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h3><p>通项公式：</p>
-<script type="math/tex; mode=display">
-a_n = a_1 + (n-1)d</script><p>前 $n$ 项和：</p>
-<script type="math/tex; mode=display">
-S_n = \frac{n(a_1 + a_n)}{2}</script><hr>
-<h3 id="等比数列"><a href="#等比数列" class="headerlink" title="等比数列"></a>等比数列</h3><p>通项公式：</p>
-<script type="math/tex; mode=display">
-a_n = a_1 q^{,n-1}</script><p>当 $q \ne 1$ 时，求和常用 <strong>错位相减法</strong>。</p>
-<hr>
-<h2 id="3-数列单调性"><a href="#3-数列单调性" class="headerlink" title="3. 数列单调性"></a>3. 数列单调性</h2><p>比较相邻两项：</p>
-<script type="math/tex; mode=display">
-a_{n+1} - a_n</script><ul>
-<li>$&gt;0$：递增</li>
-<li>$&lt;0$：递减</li>
-</ul>
-<hr>
-<h2 id="4-常用技巧"><a href="#4-常用技巧" class="headerlink" title="4. 常用技巧"></a>4. 常用技巧</h2><ul>
-<li>通项与和的关系：<script type="math/tex; mode=display">
-a_n = S_n - S_{n-1}</script></li>
-<li>裂项相消</li>
-<li>乘除相消</li>
-</ul>
-<hr>
-<h1 id="第六部分：坐标系及其变换"><a href="#第六部分：坐标系及其变换" class="headerlink" title="第六部分：坐标系及其变换"></a>第六部分：坐标系及其变换</h1><h2 id="1-直角坐标系变换"><a href="#1-直角坐标系变换" class="headerlink" title="1. 直角坐标系变换"></a>1. 直角坐标系变换</h2><h3 id="平移变换"><a href="#平移变换" class="headerlink" title="平移变换"></a>平移变换</h3><p>根据新旧原点之间的关系调整坐标。</p>
-<hr>
-<h3 id="旋转变换"><a href="#旋转变换" class="headerlink" title="旋转变换"></a>旋转变换</h3><p>坐标轴绕原点逆时针旋转 $\theta$：</p>
-<script type="math/tex; mode=display">
-\begin{cases}
-x = x' \cos \theta - y' \sin \theta \
-y = x' \sin \theta + y' \cos \theta
-\end{cases}</script><hr>
-<h2 id="2-极坐标系"><a href="#2-极坐标系" class="headerlink" title="2. 极坐标系"></a>2. 极坐标系</h2><p>组成要素：</p>
-<ul>
-<li>极点</li>
-<li>极轴</li>
-<li>极径 $r$</li>
-<li>极角 $\theta$</li>
-</ul>
-<p>通常研究狭义极坐标：</p>
-<script type="math/tex; mode=display">
-r \ge 0,\quad \theta \in [0, 2\pi)</script><hr>
-<h2 id="3-坐标互化"><a href="#3-坐标互化" class="headerlink" title="3. 坐标互化"></a>3. 坐标互化</h2><p>桥梁公式：</p>
-<script type="math/tex; mode=display">
-x = r \cos \theta,\quad y = r \sin \theta</script><script type="math/tex; mode=display">
-r = \sqrt{x^2 + y^2}</script>]]></content>
+</li>
+<li>点击 <strong>确定</strong> 并 <strong>设为默认图床</strong>。</li>
+</ol>
+<p><img src="https://img.rath02.top/2026/01/image-20260116213545933" alt="image-20260116213545933"></p>
+]]></content>
       <categories>
-        <category>数学</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>零基础</tag>
-        <tag>高数</tag>
+        <tag>hexo</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -715,83 +584,214 @@ r = \sqrt{x^2 + y^2}</script>]]></content>
       </tags>
   </entry>
   <entry>
-    <title>图床教程</title>
-    <url>/2026/01/16/%E5%9B%BE%E5%BA%8A%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h3 id="推荐方案：Cloudflare-R2-PicGo"><a href="#推荐方案：Cloudflare-R2-PicGo" class="headerlink" title="推荐方案：Cloudflare R2 + PicGo"></a>推荐方案：Cloudflare R2 + PicGo</h3><p>这是目前最推荐给使用了 Cloudflare 用户的方案。</p>
+    <title>高数基础</title>
+    <url>/2026/01/20/%E9%AB%98%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="第一部分：基本逻辑"><a href="#第一部分：基本逻辑" class="headerlink" title="第一部分：基本逻辑"></a>第一部分：基本逻辑</h1><h2 id="1-命题逻辑关系"><a href="#1-命题逻辑关系" class="headerlink" title="1. 命题逻辑关系"></a>1. 命题逻辑关系</h2><p>设命题 $A,B$：</p>
 <ul>
-<li><strong>为什么选它？</strong><ol>
-<li><strong>完全免费</strong>：Cloudflare R2 提供 <strong>10GB</strong> 的免费存储空间（对博客图片来说几乎用不完）和 <strong>零流量费</strong>。</li>
-<li><strong>速度快</strong>：直接利用 Cloudflare 全球 CDN 加速。</li>
-<li><strong>无需备案</strong>：你的域名在 spaceship 买的，DNS 在 Cloudflare，完全不需要经过国内备案流程。</li>
-<li><strong>专业</strong>：你可以使用自己的二级域名（如 <code>img.你的域名</code>）作为图片链接。如果未来你想换图床，只需要改一下 DNS 解析，文章里的几百张图片链接<strong>完全不用动</strong>。</li>
+<li><strong>充分条件</strong>：<script type="math/tex; mode=display">
+A \Rightarrow B</script>有 $A$ 一定有 $B$。</li>
+<li><strong>必要条件</strong>：<script type="math/tex; mode=display">
+B \Rightarrow A</script>没有 $B$ 就一定没有 $A$。</li>
+<li><strong>充要条件</strong>：<script type="math/tex; mode=display">
+A \Leftrightarrow B</script>$A$ 与 $B$ 等价。</li>
+<li><strong>无关条件</strong>：<br>$A$ 与 $B$ 互不推出。</li>
+</ul>
+<p>注意：<br>“$A$ 是 $B$ 的充分不必要条件”与“$A$ 是 $B$ 的必要不充分条件”<strong>方向不同，不能混淆</strong>。</p>
+<hr>
+<h2 id="2-逆否命题"><a href="#2-逆否命题" class="headerlink" title="2. 逆否命题"></a>2. 逆否命题</h2><p>命题</p>
+<script type="math/tex; mode=display">
+\text{若 } A \text{，则 } B</script><p>等价于其逆否命题</p>
+<script type="math/tex; mode=display">
+\text{若非 } B \text{，则非 } A</script><p>在证明“若 $A$ 则 $B$”较困难时，<strong>优先考虑证明逆否命题</strong>。</p>
+<hr>
+<h2 id="3-德·摩根律（对偶律）"><a href="#3-德·摩根律（对偶律）" class="headerlink" title="3. 德·摩根律（对偶律）"></a>3. 德·摩根律（对偶律）</h2><p>集合或逻辑中的对立转化：</p>
+<script type="math/tex; mode=display">
+\overline{A \cup B} = \overline{A} \cap \overline{B}</script><script type="math/tex; mode=display">
+\overline{A \cap B} = \overline{A} \cup \overline{B}</script><p>口诀：<br><strong>长杠变短杠，开口换方向</strong>。</p>
+<hr>
+<h2 id="4-数学归纳法"><a href="#4-数学归纳法" class="headerlink" title="4. 数学归纳法"></a>4. 数学归纳法</h2><p>适用于与自然数 $n$ 有关的命题。</p>
+<p>步骤：</p>
+<ol>
+<li><strong>验</strong>：验证 $n = n_0$ 时命题成立</li>
+<li><strong>设</strong>：假设 $n = k$ 时命题成立</li>
+<li><strong>证</strong>：在假设成立的基础上，证明 $n = k + 1$ 也成立</li>
 </ol>
-</li>
+<p>注意：<br>“设 $n=k$ 成立”<strong>只是推理前提，不能当结论使用</strong>。</p>
+<hr>
+<h1 id="第二部分：解析式的概念与运算"><a href="#第二部分：解析式的概念与运算" class="headerlink" title="第二部分：解析式的概念与运算"></a>第二部分：解析式的概念与运算</h1><h2 id="1-解析式分类"><a href="#1-解析式分类" class="headerlink" title="1. 解析式分类"></a>1. 解析式分类</h2><ul>
+<li><strong>代数式</strong>：整式、分式、无理式</li>
+<li><strong>超越式</strong>：指数式、对数式、三角函数式、反三角函数式</li>
+</ul>
+<p>一般指可由有限次代数运算和初等函数运算表示的式子。</p>
+<hr>
+<h2 id="2-整式"><a href="#2-整式" class="headerlink" title="2. 整式"></a>2. 整式</h2><ul>
+<li><strong>单项式</strong>：系数与字母幂的乘积</li>
+<li><strong>多项式</strong>：若干单项式的代数和</li>
+</ul>
+<p>次数判定：</p>
+<ul>
+<li>单项式次数：各字母指数之和</li>
+<li>多项式次数：各项中次数的最大值</li>
+</ul>
+<p>多项式乘法推荐使用 <strong>系数竖式法</strong>，可有效减少漏项。</p>
+<hr>
+<h2 id="3-分式与多项式长除法"><a href="#3-分式与多项式长除法" class="headerlink" title="3. 分式与多项式长除法"></a>3. 分式与多项式长除法</h2><p>化简步骤：</p>
+<ol>
+<li>分解因式，约去公因式</li>
+<li>若分子次数 $\ge$ 分母次数，可使用 <strong>多项式长除法</strong></li>
+</ol>
+<p>多项式长除法常用于：</p>
+<ul>
+<li>分式化简</li>
+<li>因式分解</li>
+<li>研究函数渐近行为</li>
 </ul>
 <hr>
-<h3 id="配置保姆级教程"><a href="#配置保姆级教程" class="headerlink" title="配置保姆级教程"></a>配置保姆级教程</h3><h4 id="第一步：在-Cloudflare-开启-R2-存储桶"><a href="#第一步：在-Cloudflare-开启-R2-存储桶" class="headerlink" title="第一步：在 Cloudflare 开启 R2 存储桶"></a>第一步：在 Cloudflare 开启 R2 存储桶</h4><ol>
-<li>登录 <a href="https://www.google.com/search?q=https://dash.cloudflare.com/">Cloudflare Dashboard</a>。</li>
-<li>在左侧菜单找到 <strong>R2</strong>（如果没开通，点击启用，需要绑定信用卡或 PayPal 验证，但<strong>不会扣费</strong>，只要你没超过 10GB）。</li>
-<li>点击 <strong>“Create bucket” (创建存储桶)</strong>。<ul>
-<li><strong>Bucket name</strong>: 随便起，比如 <code>blog-imgs</code>。</li>
-<li><strong>Location</strong>: 建议选 <code>Automatic</code> 或 <code>North America</code> (因为你的博客在 GitHub Pages，美西节点连接顺畅)。</li>
-<li>点击 <strong>Create bucket</strong>。</li>
+<h2 id="4-无理式与根式"><a href="#4-无理式与根式" class="headerlink" title="4. 无理式与根式"></a>4. 无理式与根式</h2><p>$n$ 次算术根定义：</p>
+<ul>
+<li>当 $n$ 为偶数时，$\sqrt[n]{a}$ 表示 <strong>唯一的非负实数</strong></li>
 </ul>
-</li>
-</ol>
-<h4 id="第二步：绑定你的域名-关键"><a href="#第二步：绑定你的域名-关键" class="headerlink" title="第二步：绑定你的域名 (关键)"></a>第二步：绑定你的域名 (关键)</h4><ol>
-<li>进入刚才创建的 bucket 页面。</li>
-<li>点击顶部的 <strong>“Settings” (设置)</strong> 标签。</li>
-<li>向下滚动找到 <strong>“Public Access” (公开访问)</strong> -&gt; <strong>“Custom Domains” (自定义域)</strong>。</li>
-<li>点击 <strong>“Connect Domain”</strong>。</li>
-<li>输入你想用的二级域名，比如 <code>img.你的域名</code> (前提是你的主域名 DNS 确实是在 Cloudflare 管理的)。</li>
-<li>点击 <strong>Continue</strong> -&gt; <strong>Connect Domain</strong>。</li>
-<li>等待几分钟，状态显示 “Active” 后，以后你的图片就可以通过 <code>https://img.你的域名/图片名.png</code> 访问了。</li>
-</ol>
-<span id="more"></span>
-<h4 id="第三步：获取-API-密钥"><a href="#第三步：获取-API-密钥" class="headerlink" title="第三步：获取 API 密钥"></a>第三步：获取 API 密钥</h4><p>为了让 PicGo 能上传图片，你需要“钥匙”。</p>
-<ol>
-<li>回到 R2 的主界面（列出所有 bucket 的那个页面）。</li>
-<li>在右侧找到 <strong>“Manage R2 API Tokens”</strong>。</li>
-<li>点击 <strong>“Create API Token”</strong>。</li>
-<li><strong>Permissions</strong>: 选择 <strong>Admin Read &amp; Write</strong> (读写权限)。</li>
-<li><strong>TTL</strong>: 选 <code>Forever</code> (永久)。</li>
-<li>点击 <strong>Create API Token</strong>。</li>
-<li><strong>重要：</strong> 屏幕上会显示 <code>Access Key ID</code> 和 <code>Secret Access Key</code>，<strong>立刻复制保存下来</strong>，这个页面关了就再也看不到了。</li>
-</ol>
-<h4 id="第四步：配置-PicGo"><a href="#第四步：配置-PicGo" class="headerlink" title="第四步：配置 PicGo"></a>第四步：配置 PicGo</h4><p>PicGo 原生不支持 R2，需要安装一个插件（因为 R2 兼容 AWS S3 协议）。</p>
-<ol>
-<li>打开 <strong>PicGo</strong> -&gt; <strong>插件设置</strong>。</li>
-<li>搜索安装 <code>picgo-plugin-s3</code> (注意是 s3，不是 aws-s3，推荐用 <code>s3</code> 插件更轻量，或者 <code>picgo-plugin-aws-s3</code> 也可以)。<ul>
-<li><em>如果安装失败，可能需要先安装 Node.js，或者多试几次。</em></li>
+<p>重要性质：</p>
+<script type="math/tex; mode=display">
+\sqrt{a^2} = |a|</script><p>（非常容易漏掉绝对值）</p>
+<p>常见技巧：</p>
+<ul>
+<li>分母有理化</li>
+<li>分子有理化</li>
+<li>共轭根式的使用</li>
 </ul>
-</li>
-<li>安装好后，点击 <strong>图床设置</strong> -&gt; <strong>Amazon S3</strong> (插件装好后会出现这个选项)。</li>
-<li><strong>填入配置：</strong><ul>
-<li><strong>图床配置名</strong>: <code>R2</code> (随便填)</li>
-<li><strong>应用密钥 ID (AccessKeyID)</strong>: 刚才复制的 Access Key ID。</li>
-<li><strong>应用密钥 (SecretAccessKey)</strong>: 刚才复制的 Secret Access Key。</li>
-<li><strong>桶名 (Bucket)</strong>: 你创建的 bucket 名字 (比如 <code>blog-imgs</code>)。</li>
-<li><strong>文件路径</strong>: <code>{year}/{month}/{fileName}</code> (可选，按年月分类)。</li>
-<li><strong>地区 (Region)</strong>: <code>auto</code> (如果你一定要填，填 <code>us-east-1</code>，但在 Cloudflare R2 中通常填 <code>auto</code> 或留空)。</li>
-<li><strong>自定义节点 (Endpoint)</strong>: <strong>这是关键！</strong><ul>
-<li>回到 Cloudflare R2 界面，在 bucket 详情页，你会看到一个 <strong>“S3 API”</strong> 的链接，通常长这样：<code>https://&lt;你的账号ID&gt;.r2.cloudflarestorage.com</code>。</li>
-<li><strong>把这个链接填进去。</strong> (注意：<strong>不要</strong>在后面加 bucket 名字)。</li>
+<hr>
+<h1 id="第三部分：方程与不等式"><a href="#第三部分：方程与不等式" class="headerlink" title="第三部分：方程与不等式"></a>第三部分：方程与不等式</h1><h2 id="1-一元二次方程"><a href="#1-一元二次方程" class="headerlink" title="1. 一元二次方程"></a>1. 一元二次方程</h2><p>标准形式：</p>
+<script type="math/tex; mode=display">
+ax^2 + bx + c = 0 \quad (a \ne 0)</script><p>求根公式：</p>
+<script type="math/tex; mode=display">
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</script><p>判别式：</p>
+<script type="math/tex; mode=display">
+\Delta = b^2 - 4ac</script><ul>
+<li>$\Delta &gt; 0$：两个不等实根</li>
+<li>$\Delta = 0$：重根</li>
+<li>$\Delta &lt; 0$：一对共轭复根（含 $i$）</li>
 </ul>
-</li>
-<li><strong>自定义域名</strong>: <code>https://img.你的域名/{path}</code> (刚才绑定的那个二级域名)。</li>
-<li><strong>强制路径样式 (ForcePathStyle)</strong>: 选 <code>否</code> (或者如果不成功改选 <code>是</code> 试试)。</li>
+<hr>
+<h2 id="2-韦达定理"><a href="#2-韦达定理" class="headerlink" title="2. 韦达定理"></a>2. 韦达定理</h2><p>对于方程 $ax^2 + bx + c = 0$，设两根为 $x_1, x_2$：</p>
+<script type="math/tex; mode=display">
+x_1 + x_2 = -\frac{b}{a}</script><script type="math/tex; mode=display">
+x_1 x_2 = \frac{c}{a}</script><p>可推广至 $n$ 次方程，但考试中以二次最常见。</p>
+<hr>
+<h2 id="3-常用不等式"><a href="#3-常用不等式" class="headerlink" title="3. 常用不等式"></a>3. 常用不等式</h2><h3 id="均值不等式"><a href="#均值不等式" class="headerlink" title="均值不等式"></a>均值不等式</h3><script type="math/tex; mode=display">
+\text{调和平均} \le \text{几何平均} \le \text{算术平均} \le \text{均方根}</script><p>使用前需满足 <strong>非负条件</strong>。</p>
+<hr>
+<h3 id="三角不等式"><a href="#三角不等式" class="headerlink" title="三角不等式"></a>三角不等式</h3><script type="math/tex; mode=display">
+|a + b| \le |a| + |b|</script><p>等号成立条件：$ab \ge 0$。</p>
+<hr>
+<h3 id="柯西不等式"><a href="#柯西不等式" class="headerlink" title="柯西不等式"></a>柯西不等式</h3><script type="math/tex; mode=display">
+(a_1^2 + a_2^2 + \cdots + a_n^2)(b_1^2 + b_2^2 + \cdots + b_n^2)
+\ge
+(a_1 b_1 + a_2 b_2 + \cdots + a_n b_n)^2</script><p>常用于代数放缩与最值问题。</p>
+<hr>
+<h2 id="4-二次函数研究"><a href="#4-二次函数研究" class="headerlink" title="4. 二次函数研究"></a>4. 二次函数研究</h2><p>通过函数图像分析：</p>
+<ul>
+<li>根是否在某区间内</li>
+<li>根在某常数左右的条件</li>
 </ul>
-</li>
-<li>点击 <strong>确定</strong> 并 <strong>设为默认图床</strong>。</li>
-</ol>
-<p><img src="https://img.rath02.top/2026/01/image-20260116213545933" alt="image-20260116213545933"></p>
-]]></content>
+<p>常见问题类型：</p>
+<ul>
+<li>区间内恒成立</li>
+<li>区间最值</li>
+<li>参数取值范围讨论</li>
+</ul>
+<hr>
+<h1 id="第四部分：函数"><a href="#第四部分：函数" class="headerlink" title="第四部分：函数"></a>第四部分：函数</h1><h2 id="1-基本初等函数"><a href="#1-基本初等函数" class="headerlink" title="1. 基本初等函数"></a>1. 基本初等函数</h2><p>幂函数、指数函数、对数函数需掌握：</p>
+<ul>
+<li>定义域</li>
+<li>单调性</li>
+<li>图像特征</li>
+</ul>
+<p>对数运算法则：</p>
+<script type="math/tex; mode=display">
+\log(ab) = \log a + \log b</script><script type="math/tex; mode=display">
+\log\left(\frac{a}{b}\right) = \log a - \log b</script><script type="math/tex; mode=display">
+\log(a^k) = k \log a</script><hr>
+<h2 id="2-三角与反三角函数"><a href="#2-三角与反三角函数" class="headerlink" title="2. 三角与反三角函数"></a>2. 三角与反三角函数</h2><p>基本三角函数：</p>
+<script type="math/tex; mode=display">
+\sin x,\quad \cos x,\quad \tan x</script><p>反三角函数需特别注意：</p>
+<ul>
+<li>定义域</li>
+<li>主值区间</li>
+</ul>
+<p>诱导公式口诀：<br><strong>奇变偶不变，符号看象限</strong>。</p>
+<hr>
+<h2 id="3-图像变换"><a href="#3-图像变换" class="headerlink" title="3. 图像变换"></a>3. 图像变换</h2><p>平移规律：</p>
+<ul>
+<li>左加右减</li>
+<li>上加下减</li>
+</ul>
+<p>伸缩变换：</p>
+<ul>
+<li>水平伸缩：影响 $x$</li>
+<li>垂直伸缩：影响 $y$</li>
+</ul>
+<hr>
+<h2 id="4-函数特性"><a href="#4-函数特性" class="headerlink" title="4. 函数特性"></a>4. 函数特性</h2><ul>
+<li><strong>奇函数</strong>：关于原点对称</li>
+<li><strong>偶函数</strong>：关于 $y$ 轴对称</li>
+</ul>
+<p>对称性常用于简化最值和图像分析。</p>
+<hr>
+<h1 id="第五部分：数列及其单调性"><a href="#第五部分：数列及其单调性" class="headerlink" title="第五部分：数列及其单调性"></a>第五部分：数列及其单调性</h1><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h2><p>数列是定义在正整数集上的函数：</p>
+<script type="math/tex; mode=display">
+a_1, a_2, \ldots, a_n, \ldots</script><hr>
+<h2 id="2-等差与等比数列"><a href="#2-等差与等比数列" class="headerlink" title="2. 等差与等比数列"></a>2. 等差与等比数列</h2><h3 id="等差数列"><a href="#等差数列" class="headerlink" title="等差数列"></a>等差数列</h3><p>通项公式：</p>
+<script type="math/tex; mode=display">
+a_n = a_1 + (n-1)d</script><p>前 $n$ 项和：</p>
+<script type="math/tex; mode=display">
+S_n = \frac{n(a_1 + a_n)}{2}</script><hr>
+<h3 id="等比数列"><a href="#等比数列" class="headerlink" title="等比数列"></a>等比数列</h3><p>通项公式：</p>
+<script type="math/tex; mode=display">
+a_n = a_1 q^{,n-1}</script><p>当 $q \ne 1$ 时，求和常用 <strong>错位相减法</strong>。</p>
+<hr>
+<h2 id="3-数列单调性"><a href="#3-数列单调性" class="headerlink" title="3. 数列单调性"></a>3. 数列单调性</h2><p>比较相邻两项：</p>
+<script type="math/tex; mode=display">
+a_{n+1} - a_n</script><ul>
+<li>$&gt;0$：递增</li>
+<li>$&lt;0$：递减</li>
+</ul>
+<hr>
+<h2 id="4-常用技巧"><a href="#4-常用技巧" class="headerlink" title="4. 常用技巧"></a>4. 常用技巧</h2><ul>
+<li>通项与和的关系：<script type="math/tex; mode=display">
+a_n = S_n - S_{n-1}</script></li>
+<li>裂项相消</li>
+<li>乘除相消</li>
+</ul>
+<hr>
+<h1 id="第六部分：坐标系及其变换"><a href="#第六部分：坐标系及其变换" class="headerlink" title="第六部分：坐标系及其变换"></a>第六部分：坐标系及其变换</h1><h2 id="1-直角坐标系变换"><a href="#1-直角坐标系变换" class="headerlink" title="1. 直角坐标系变换"></a>1. 直角坐标系变换</h2><h3 id="平移变换"><a href="#平移变换" class="headerlink" title="平移变换"></a>平移变换</h3><p>根据新旧原点之间的关系调整坐标。</p>
+<hr>
+<h3 id="旋转变换"><a href="#旋转变换" class="headerlink" title="旋转变换"></a>旋转变换</h3><p>坐标轴绕原点逆时针旋转 $\theta$：</p>
+<script type="math/tex; mode=display">
+\begin{cases}
+x = x' \cos \theta - y' \sin \theta \
+y = x' \sin \theta + y' \cos \theta
+\end{cases}</script><hr>
+<h2 id="2-极坐标系"><a href="#2-极坐标系" class="headerlink" title="2. 极坐标系"></a>2. 极坐标系</h2><p>组成要素：</p>
+<ul>
+<li>极点</li>
+<li>极轴</li>
+<li>极径 $r$</li>
+<li>极角 $\theta$</li>
+</ul>
+<p>通常研究狭义极坐标：</p>
+<script type="math/tex; mode=display">
+r \ge 0,\quad \theta \in [0, 2\pi)</script><hr>
+<h2 id="3-坐标互化"><a href="#3-坐标互化" class="headerlink" title="3. 坐标互化"></a>3. 坐标互化</h2><p>桥梁公式：</p>
+<script type="math/tex; mode=display">
+x = r \cos \theta,\quad y = r \sin \theta</script><script type="math/tex; mode=display">
+r = \sqrt{x^2 + y^2}</script>]]></content>
       <categories>
-        <category>教程</category>
+        <category>数学</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>图床</tag>
+        <tag>零基础</tag>
+        <tag>高数</tag>
       </tags>
   </entry>
 </search>
