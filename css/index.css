@@ -8284,6 +8284,29 @@ input:focus-visible {
   letter-spacing: 0.08em;
   text-shadow: 0 1px 10px rgba(0,0,0,0.24);
 }
+#page-header #site-subtitle #subtitle.is-awaiting-reveal {
+  visibility: hidden;
+}
+#page-header #site-subtitle #subtitle.is-revealing {
+  visibility: visible;
+}
+#page-header #site-subtitle .subtitle-char {
+  display: inline-block;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  filter: blur(4px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-animation: subtitle-char-in 0.52s var(--ios-ease) forwards;
+  -moz-animation: subtitle-char-in 0.52s var(--ios-ease) forwards;
+  -o-animation: subtitle-char-in 0.52s var(--ios-ease) forwards;
+  -ms-animation: subtitle-char-in 0.52s var(--ios-ease) forwards;
+  animation: subtitle-char-in 0.52s var(--ios-ease) forwards;
+}
 #page-header #scroll-down {
   display: -webkit-inline-box;
   display: -moz-inline-box;
@@ -8799,38 +8822,30 @@ input:focus-visible {
 #archive > .article-sort-title {
   position: relative;
   margin: -48px -52px 40px;
-  padding: 42px 52px 36px;
+  padding: 42px 52px 40px;
   border-bottom: 1px solid var(--ios-separator);
   border-radius: 30px 30px 0 0;
   background: var(--ios-header-bg);
 }
+#page > .page-title:before,
+#archive > .article-sort-title:before,
 #page > .page-title:after,
 #archive > .article-sort-title:after {
-  display: block;
-  position: static;
-  margin-top: 18px;
-  width: 54px;
-  height: 3px;
-  border-radius: 99px;
-  background: var(--ios-accent);
-  content: '';
+  display: none !important;
+  content: none !important;
 }
 #post > #post-info {
   position: relative;
   margin: -48px -52px 44px;
-  padding: 48px 52px 38px;
+  padding: 42px 52px 40px;
   border-bottom: 1px solid var(--ios-separator);
   border-radius: 30px 30px 0 0;
   background: var(--ios-header-bg);
 }
-#post > #post-info:before {
-  display: block;
-  margin-bottom: 18px;
-  width: 42px;
-  height: 3px;
-  border-radius: 99px;
-  background: var(--ios-accent);
-  content: '';
+#post > #post-info:before,
+#post > #post-info:after {
+  display: none !important;
+  content: none !important;
 }
 #post > #post-info .post-title {
   margin: 0 0 12px;
@@ -9691,7 +9706,7 @@ hr.custom-hr:before {
   }
   #post > #post-info {
     margin: -28px -20px 28px;
-    padding: 26px 20px 22px;
+    padding: 30px 20px 26px;
   }
   #post > #post-info .post-title {
     font-size: 29px;
@@ -9721,7 +9736,7 @@ hr.custom-hr:before {
   #page > .page-title,
   #archive > .article-sort-title {
     margin: -28px -20px 28px;
-    padding: 22px 20px;
+    padding: 28px 20px 26px;
   }
   .article-sort {
     padding: 2px 14px 8px;
@@ -9889,6 +9904,58 @@ hr.custom-hr:before {
     opacity: 1;
     -ms-filter: none;
     filter: none;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes subtitle-char-in {
+  to {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    filter: blur(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes subtitle-char-in {
+  to {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    filter: blur(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-o-keyframes subtitle-char-in {
+  to {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    filter: blur(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -o-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes subtitle-char-in {
+  to {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    filter: blur(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -o-transform: translateY(0);

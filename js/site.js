@@ -71,9 +71,44 @@
     observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] })
   }
 
+  const setupSubtitleReveal = () => {
+    const subtitle = document.getElementById('subtitle')
+    if (!subtitle) return
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    subtitle.classList.add('is-awaiting-reveal')
+
+    const reveal = () => {
+      const text = subtitle.textContent.trim()
+      if (!text || subtitle.dataset.revealed === 'true') return
+
+      subtitle.dataset.revealed = 'true'
+      subtitle.classList.remove('is-awaiting-reveal')
+
+      if (reduceMotion) return
+
+      const fragment = document.createDocumentFragment()
+      Array.from(text).forEach((character, index) => {
+        const span = document.createElement('span')
+        span.className = 'subtitle-char'
+        span.style.animationDelay = `${index * 90}ms`
+        span.textContent = character
+        fragment.appendChild(span)
+      })
+
+      subtitle.replaceChildren(fragment)
+      subtitle.classList.add('is-revealing')
+    }
+
+    const observer = new MutationObserver(reveal)
+    observer.observe(subtitle, { childList: true, characterData: true, subtree: true })
+    reveal()
+  }
+
   syncHeader()
   setupReveal()
   setupHero()
   setupThemeTransition()
+  setupSubtitleReveal()
   window.addEventListener('scroll', syncHeader, { passive: true })
 })()
